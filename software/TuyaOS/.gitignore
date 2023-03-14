@@ -1,0 +1,25 @@
+# ide
+/.vscode
+
+# externals
+/adapter
+/vendor
+/components
+/apps
+/build
+/samples
+
+# generated
+/output/
+/TuyaOS/
+/libs/
+/include/
+/docs/
+/crash.log
+/tmp
+/build_app.sh
+
+
+# config
+.config*
+

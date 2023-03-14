@@ -1,0 +1,24 @@
+#ifndef TUYA_LAN_VERSION
+#define TUYA_LAN_VERSION TUYA_LAN_V35
+#endif
+
+#ifndef TUYA_MQ_VERSION
+#define TUYA_MQ_VERSION TUYA_MQ_V23
+#endif
+
+#ifndef ENABLE_DEVICE_DATA_COLLECT
+#define ENABLE_DEVICE_DATA_COLLECT 0
+#endif
+
+#ifndef TUYA_WEAK_ATTRIBUTE
+#define TUYA_WEAK_ATTRIBUTE __attribute__ ((weak))
+#endif
+
+/* custom settings */
+
+#ifdef __cplusplus
+}
+#endif
+
+
+#endif

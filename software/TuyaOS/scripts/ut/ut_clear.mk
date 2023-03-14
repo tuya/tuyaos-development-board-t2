@@ -1,0 +1,7 @@
+
+UT_MODULE       :=
+UT_TEST_FILES   :=
+UT_MOCK_FILES   := 
+UT_SDK_DEPENDS  :=
+UT_MOCK_DEPENDS :=
+

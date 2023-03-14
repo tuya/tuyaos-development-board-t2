@@ -1,0 +1,715 @@
+{"TuyaEmbeddedErrcode":
+    [
+        {"name":"global", "offset":0,
+            "errcode":[
+                {"OK":"执行成功"},
+                {"COM_ERROR":"通用错误"},
+                {"INVALID_PARM":"无效的入参"},
+                {"MALLOC_FAILED":"内存分配失败"},
+                {"NOT_SUPPORTED":"不支持"},
+                {"NETWORK_ERROR":"网络错误"},
+                {"NOT_FOUND":"没有找到对象"},
+                {"CR_CJSON_ERR":"创建json对象失败"},
+                {"CJSON_PARSE_ERR":"json解析失败"},
+                {"CJSON_GET_ERR":"获取json对象失败"},
+                {"CR_MUTEX_ERR":"创建信号量失败"},
+                {"SOCK_ERR":"创建socket失败"},
+                {"SET_SOCK_ERR":"socket设置失败"},
+                {"SOCK_CONN_ERR":"socket连接失败"},
+                {"SEND_ERR":"发送失败"},
+                {"RECV_ERR":"接收失败"},
+                {"RECV_DA_NOT_ENOUGH":"接收数据不完整"},
+                {"KVS_WR_FAIL":"KV写失败"},
+                {"KVS_RD_FAIL":"KV读失败"},
+                {"CRC32_FAILED":"CRC校验失败"},
+                {"TIMEOUT":"超时"},
+                {"INIT_MORE_THAN_ONCE":"初始化超过一次"},
+                {"INDEX_OUT_OF_BOUND":"索引越界"},
+                {"RESOURCE_NOT_READY":"资源未完善"},
+                {"EXCEED_UPPER_LIMIT":"超过上限"},
+                {"FILE_NOT_FIND":"文件未找到"},
+                {"FILE_IS_FULL":"文件已满"},
+                {"FILE_OPEN_FAILED":"文件打开失败"},
+                {"FILE_READ_FAILED":"文件读取失败"},
+                {"FILE_WRITE_FAILED":"文件写入失败"},
+                {"NOT_EXIST":"不存在"},
+                {"BUFFER_NOT_ENOUGH":"缓存不足"},
+                {"ROUTER_NOT_FOUND":"路由器未找到"},
+                {"AUTHENTICATION_NOT_FOUND":"未认证"},
+                {"AUTHENTICATION_FAIL":"认证失败"},
+                {"MSG_OUT_OF_LIMIT":"消息超出上限"},
+                {"VERSION_FMT_ERR":"版本不匹配"}
+            ]
+        },
+        {"name":"base_os_adapter", "offset":1,
+            "errcode":[
+                {"REG_NULL_ERROR":"系统适配注册失败"}
+            ]
+        },
+        {"name":"base_utilities", "offset":2,
+            "errcode":[
+                {"PARTITION_EMPTY":"无空闲链表"},
+                {"PARTITION_FULL":"链表已满"},
+                {"PARTITION_NOT_FOUND":"链表未遍历到"}
+            ]
+        },
+        {"name":"base_security", "offset":3,
+            "errcode":[
+                {"CRC32_FAILED":"CRC32错误"}
+            ]
+        },
+        {"name":"base_log_mng", "offset":4,
+            "errcode":[
+                {"DONOT_FOUND_MODULE":"未发现log模块"},
+                {"PRINT_LOG_LEVEL_HIGHER":"log级别低"},
+                {"FORMAT_STRING_FAILED":"log字符串格式化失败"},
+                {"LOG_SEQ_OPEN_FILE_FAIL":"打开日志序文件失败"},
+                {"LOG_SEQ_WRITE_FILE_FAIL":"写日志序文件失败"},
+                {"LOG_SEQ_FILE_FULL":"日志序文件满"},
+                {"LOG_SEQ_FILE_NOT_EXIST":"日志序文件不存在"},
+                {"LOG_SEQ_NAME_INVALIDE":"日志序名称无效"},
+                {"LOG_SEQ_CREATE_FAIL":"日志序创建失败"}
+            ]
+        },
+        {"name":"base_workq", "offset":5,
+            "errcode":[
+            ]
+        },
+        {"name":"base_timeq", "offset":6,
+            "errcode":[
+                {"TIMERID_EXIST":"定时器ID已存在"},
+                {"TIMERID_NOT_FOUND":"未找到指定定时器ID"},
+                {"TIMERID_UNVALID":"定时器ID非法"},
+                {"GET_IDLE_TIMERID_ERROR":"获取空闲定时器ID错误"}
+            ]
+        },
+        {"name":"base_msgq", "offset":7,
+            "errcode":[
+                {"NOT_FOUND":"消息未找到"},
+                {"LIST_EMPTY":"列表为空"}
+            ]
+        },
+        {"name":"mid_http", "offset":8,
+            "errcode":[
+                {"BUF_NOT_ENOUGH":"缓冲区长度不足"},
+                {"URL_PARAM_OUT_LIMIT":"URL长度超出限制"},
+                {"OS_ERROR":"系统错误"},
+                {"PR_REQ_ERROR":"准备请求错误,请检查网络是否正常"},
+                {"SD_REQ_ERROR":"发送请求错误,请检查网络是否正常"},
+                {"RD_ERROR":"读取错误,请检查网络是否正常"},
+                {"AD_HD_ERROR":"添加头错误"},
+                {"GET_RESP_ERROR":"获取应答错误"},
+                {"AES_INIT_ERR":"AES初始化错误"},
+                {"AES_OPEN_ERR":"AES打开错误"},
+                {"AES_SET_KEY_ERR":"AES设置KEY错误"},
+                {"AES_ENCRYPT_ERR ":"AES加密错误"},
+                {"CR_HTTP_URL_H_ERR":"创建HTTP URL头错误"},
+                {"HTTPS_HANDLE_FAIL":"HTTPS句柄错误"},
+                {"HTTPS_RESP_UNVALID":"HTTPS无效应答"},
+                {"NO_SUPPORT_RANGE":"不支持断点续传"}
+            ]
+        },
+        {"name":"mid_mqtt", "offset":9,
+            "errcode":[
+                {"DEF_ERR":"定义失败"},
+                {"INVALID_PARM":"参数无效"},
+                {"MALLOC_FAILED":"内存申请失败"},
+                {"DNS_PARSED_FAILED":"DNS解析失败,请检查网络是否正常"},
+                {"SOCK_CREAT_FAILED":"socket创建失败"},
+                {"SOCK_SET_FAILED":"socket set失败"},
+                {"TCP_CONNECD_FAILED":"tcp连接失败,请检查网络是否正常"},
+                {"TCP_TLS_CONNECD_FAILED":"tcp tls连接失败,请检查网络是否正常"},
+                {"PACK_SEND_FAILED":"包发送失败,请检查网络是否正常"},
+                {"RECV_DATA_FORMAT_WRONG":"接收数据格式错误"},
+                {"MSGID_NOT_MATCH":"接收数据msgid未找到"},
+                {"START_TM_MSG_ERR":"开始事件msg错误"},
+                {"OVER_MAX_MESSAGE_LEN":"超过消息最大长度"},
+                {"PING_SEND_ERR":"ping发送失败,请检查网络是否正常"},
+                {"PUBLISH_TIMEOUT":"发布超时,请检查网络是否正常"}
+            ]
+        },
+        {"name":"mid_tls", "offset":10,
+            "errcode":[
+                {"NET_SOCKET_ERROR":"Failed to open a socket"},
+                {"NET_CONNECT_ERROR":"The connection to the given server / port failed."},
+                {"UNKNOWN_HOST_ERROR":"Failed to get an IP address for the given hostname."},
+                {"CONNECTION_ERROR":"TLS连接失败,请检查网络是否正常"},
+                {"DRBG_ENTROPY_ERROR":"mbedtls随机种子生成失败"},
+                {"X509_ROOT_CRT_PARSE_ERROR":"X509根证书解析失败"},
+                {"X509_DEVICE_CRT_PARSE_ERROR":"X509设备证书解析失败"},
+                {"CTR_DRBG_ENTROPY_SOURCE_ERROR":"The entropy source failed"},
+                {"PK_PRIVATE_KEY_PARSE_ERROR":"秘钥解析失败"}
+            ]
+        },
+        {"name":"svc_wifi", "offset":11,
+            "errcode":[
+                {"RECV_CONTINUE":"继续接收配网包"},
+                {"DONOT_FOUND_MODULE":"模块未找到"},
+                {"PEGASUS_DECODE_FAILED":"闪电包解析错误"},
+		        {"NEED_FACTORY_RESET":"wifi初始化配置校验失败，需要恢复出厂设置"}
+            ]
+        },
+        {"name":"svc_online_log", "offset":12,
+            "errcode":[
+                ]
+        },
+        {"name":"svc_mf_test", "offset":13,
+            "errcode":[
+                {"UPDATE_DATA_LEN_EXECED":"升级数据长度超过处理上限"},
+                {"UPDATE_CRC_ERROR":"升级crc校验失败"}
+            ]
+        },
+        {"name":"svc_dp", "offset":14,
+            "errcode":[
+                {"ALREADY_PROCESS":"DP已经处理"},
+                {"ID_NOT_FOUND":"DP ID没有发现，请检查上报DP ID是否正确"},
+                {"TP_NOT_MATCH":"DP 类型未匹配，请检查上报DP类型是否正确"},
+                {"DEVICE_NOT_BINDED":"设备未绑定"},
+                {"TYPE_PROP_ILLEGAL":"类型属性不合法，枚举型值不存在"},
+                {"NW_INVALID":"网络无效，请检查网络是否正常"},
+                {"SECURITY_VERIFY_ERR":"安全校验失败"},
+                {"REPORT_FINISH":"DP上报已结束"}
+            ]
+        },
+        {"name":"base_event", "offset":15,
+            "errcode":[
+                {"INVALID_EVENT_NAME":"无效的事件名"},
+                {"INVALID_EVENT_DESC":"无效的事件描述"}
+            ]
+        },
+        {"name":"svc_timer_task", "offset":16,
+            "errcode":[
+                {"LOAD_INVALID_CJSON":"K/V中保存的数据JSON格式错误"},
+                {"LOAD_INVALID_DATA":"K/V中保存的数据缺少cnt字段"},
+                {"UPDATE_LAST_FETCH_INVALID":"云端返回的数据缺少lastFetchTime字段"},
+                {"UPDATE_TIMER_CNT_INVALID":"云端返回的数据缺少count字段"},
+                {"UPDATE_TIMER_CNT_EXCEED":"云端返回的定时任务数量超过30个"}
+            ]
+        },
+        {"name":"svc_http", "offset":17,
+            "errcode":[
+                {"NOT_ENCRYPT_RET":"结果未加密，请检查是否有权限访问"},
+                {"FILL_URL_H_ERR":"构造header错误"},
+                {"FILL_URL_FULL_ERR":"构造整个URL错误"},
+                {"FILL_DATA_ERR":"构造data错误"},
+                {"URL_CFG_AI_SPEAKER_ERR":"音响配置失败"},
+                {"URL_CFG_URL_ERR":"httpUrl/mqttUrl字段缺失"},
+                {"URL_CFG_URL2IP_ERR":"httpUrl/mqttUrl解析错误"},
+                {"URL_CFG_URL2IP_SELF_ERR":"httpsSelfUrl/mqttsSelfUrl解析错误"},
+                {"URL_CFG_URL2IP_VERIFY_ERR":"httpsVerifyUrl/mqttsVerifyUrl解析错误"},
+                {"URL_CFG_URL2IP_PSK_ERR":"httpsPSKUrl/mqttsPSKUrl解析错误"},
+                {"RECV_ERR":"接收数据错误，请检查网络是否正常"},
+                {"RECV_DA_NOT_ENOUGH":"接收数据不足"},
+                {"API_VERIFY_FAILED":"数据校验错误"},
+                {"GW_NOT_EXIST":"网关信息不存在"},
+                {"API_TOKEN_EXPIRE":"TOKEN过期"},
+                {"DEV_RESET_FACTORY":"设备需要恢复出厂"},
+                {"DEV_NEED_REGISTER":"设备未注册"},
+                {"ORDER_EXPIRE":"订单已过期"},
+                {"NOT_EXISTS":"不存在"},
+                {"SIGNATURE_ERROR":"签名错误"},
+                {"API_VERSION_WRONG":"API版本错误"},
+                {"DEVICE_REMOVED":"设备已移除"},
+                {"DEV_ALREADY_BIND":"设备已经绑定"},
+                {"REMOTE_API_RUN_UNKNOW_FAILED":"无法识别API"},
+                {"FORMAT_STRING_FAILED":"字符串格式化错误"},
+                {"API_DECODE_FAILED":"数据解密失败"},
+                {"SERV_VRFY_FAIL":"服务端校验失败"},
+                {"DEVICE_IS_SUB_NODE_OR_IN_ELECTION":"动态mesh设备云端处于选举中"},
+                {"EXT_MOD_NOT_SUPPORT_AUTO_ACT":"扩展模块不支持自动激活"}
+            ]
+        },
+        {"name":"svc_lan", "offset":21,
+            "errcode":[
+                {"SOCKET_FAULT":"socket错误，APP主动断开或者网络异常"},
+                {"SEND_ERR":"socket发送错误,请检查网络是否正常"},
+                {"NO_CLIENT_CONNECTED":"没有可以上报的局域网设备连接"}
+            ]
+        },
+        {"name":"svc_lan_linkage", "offset":22,
+            "errcode":[
+                {"SOCK_CREAT_ERR":"socket创建失败"},
+                {"SET_SOCK_ERR":"socket set失败"},
+                {"SOCK_CONN_ERR":"socket连接失败,请检查网络是否正常"},
+                {"SEND_ERR":"发送失败,请检查网络是否正常"},
+                {"RECV_ERR":"接收失败,请检查网络是否正常"}
+            ]
+        },
+        {"name":"svc_mqtt", "offset":23,
+            "errcode":[
+                {"CMD_NOT_EXEC":"命令未执行"},
+                {"CMD_OUT_OF_TIME":"命令未在规定时间内执行"},
+                {"GW_MQ_OFFLILNE":"MQTT离线,请检查网络是否正常"}
+            ]
+        },
+        {"name":"svc_pegasus", "offset":24,
+            "errcode":[
+                {"DECODE_FAILED":"解码失败"},
+                {"DONOT_FOUND_MODULE":"模块未找到"}
+            ]
+        },
+        {"name":"svc_upgrade", "offset":25,
+            "errcode":[
+                {"APP_NOT_READY":"应用尚未就绪"},
+                {"NO_VALID_FIRMWARE":"升级信息字段校验失败"},
+                {"LAN_OTA_FINISH":"局域网ota完成"}
+            ]
+        },
+        {"name":"svc_api_iot", "offset":26,
+            "errcode":[
+                {"DISCONNECTED_WITH_ROUTER":"路由器断开"},
+                {"DEV_NOT_BIND":"设备未绑定"}
+            ]
+        },
+        {"name":"svc_cellular", "offset":27,
+            "errcode":[
+                {"CALL_FAILED":"发起呼叫失败"},
+                {"CALL_VOICE_START_ERR":"开启呼叫语音失败"},
+                {"CALL_ANSWER_ERR":"呼叫应答失败"},
+                {"CALL_GET_INFO_ERR":"获取呼叫信息失败"},
+                {"CALL_HUNGUP_ERR":"呼叫挂机失败"},
+                {"SMS_SEND_ERR":"短信发送失败"},
+                {"SMS_SEND_TIMEOUT":"短信发送超时"},
+                {"SMS_ENCODE_ERR":"短信编码错误"},
+                {"SMS_SIZE_ERR":"短信超长"}
+            ]
+        },
+        {"name":"svc_devos", "offset":28,
+            "errcode":[
+                {"NOT_EXISTS":"不存在"},
+                {"SCMA_INVALID":"SCMA无效"},
+                {"DEV_DP_CNT_INVALID":"设备DP数量无效，不能超过255个"},
+                {"NO_AUTHENTICATION":"无授权"},
+                {"ROUTER_NOT_FIND":"路由器未找到"}
+            ]
+        },
+        {"name":"base_db", "offset":29,
+            "errcode":[
+                {"FLASH_NOT_ENOUGH_PAGE":"flash页不够"}
+            ]
+        },
+        {"name":"link_core", "offset":30,
+            "errcode":[
+                {"NET_SOCKET_ERROR":"Failed to open a socket"},
+                {"NET_CONNECT_ERROR":"The connection to the given server / port failed."},
+                {"UNKNOWN_HOST_ERROR":"Failed to get an IP address for the given hostname."},
+                {"TLS_CONNECTION_ERROR":"TLS连接失败"},
+                {"DRBG_ENTROPY_ERROR":"mbedtls随机种子生成失败"},
+                {"X509_ROOT_CRT_PARSE_ERROR":"X509根证书解析失败"},
+                {"X509_DEVICE_CRT_PARSE_ERROR":"X509设备证书解析失败"},
+                {"PK_PRIVATE_KEY_PARSE_ERROR":"秘钥解析失败"},
+                {"HTTP_CLIENT_HEADER_ERROR":"HTTP头初始化失败"},
+                {"HTTP_CLIENT_SEND_ERROR":"HTTP请求发送失败"},
+                {"HTTP_RESPONSE_BUFFER_EMPTY":"HTTPb buffer为空"},
+                {"HTTP_GW_NOT_EXIST":"网关不存在，可能设备已被删除"}
+            ]
+        },
+        {"name":"svc_bt", "offset":31,
+            "errcode":[
+                {"API_TRSMITR_CONTINUE":"传输未结束"},
+                {"API_TRSMITR_ERROR":"传输错误"},
+                {"NETCFG_ERROR_ACK":"bt命令出错，给app发送ack"}
+            ]
+        },
+        {"name":"svc_netmgr", "offset":32,
+            "errcode":[
+                {"NEED_FACTORY_RESET":"网络初始化配置校验失败，需要恢复出厂设置"}
+            ]
+        },
+        {"name":"GW_BT_DEV", "offset":49,
+            "errcode":[
+                {"BLE_CONNECT_SUCCESS":"ble设备连接成功"},
+                {"BLE_CONNECT_CNT_EXCEED":"ble设备连接数量已超出最大限制"},
+                {"BLE_CONNECT_HAL_FAILED":"ble设备连接HAL层接口返回失败"},
+                {"BLE_CONNECT_HANDS_FAILED":"ble设备连接握手失败"},
+                {"BLE_CONNECT_HANDS_TIMEOUT":"ble设备连接握手超时,请检查下设备是否正常上电状态,是否距离过远,是否被手机蓝牙连接"},
+                {"BLE_CONNECT_GET_INFO_FAILED":"ble设备连接get_info失败"},
+                {"BLE_CONNECT_GET_LOGIN_KEY_FAILED":"ble设备连接get_login_key失败"},
+                {"BLE_CONNECT_PAIR_DATA_LEN_ERR":"ble设备连接pair_data_len_err失败"},
+                {"BLE_CONNECT_SESSION_OPEN_TIMEOUT":"ble设备连接session_open超时"},
+                {"BLE_CONNECT_SEND_FAILED":"ble设备连接数据发送失败"},
+                {"BLE_LOCAL_RESET":"ble设备本地重置,请确认是否设备被手动重置"},
+                {"BLE_SCAN_TIMEOUT":"ble设备广播包扫描超时,请检查下设备是否正常上电状态,是否距离过远,是否被手机蓝牙连接"},
+                {"BLE_DISCONNECT_SUCCESS":"ble设备断开成功"},
+                {"BEACON_DEV_NOT_FOUND":"设备没有发现"},
+                {"BEACON_DEV_KEY1_NOT_FOUND":"设备KEY1没有发现，通信数据加密的key"},
+                {"BEACON_DEV_NOT_BIND":"设备未绑定,请重新绑定设备"},
+                {"BEACON_DECODE_PAIR_MSG_FAILED":"设备配网时,网关请求云端解密配网信息失败"},
+                {"BEACON_KEY_RESP_TIMEOUT":"设备配网时,设备beaconkey应答超时"},
+                {"BEACON_JOIN_NOTIFY_RESP_TIMEOUT":"设备配网时,设备入网通知应答超时"}
+            ]
+        },
+        {"name":"GW_ZG_DEV", "offset":50,
+            "errcode":[
+                {"ZB_HOST_TABLE_NULL":"设备未存在host表,将被移除,网关没有存储过该设备的信息"},
+                {"ZB_SEQ_INVALID":"ZCL seq无效,当前数据包的seq小于上一个数据包的seq"},
+                {"ZB_HOST_TO_GATEWAY_ERR":"从host端发送数据到gateway组件出错,本地udp数据传输出错,建议重启网关"},
+                {"ZB_DATA_TOO_BIG":"zigbee的数据长度太大被丢弃,建议检查数据格式"},
+                {"ZB_GW_TABLE_NULL":"网关设备表未初始化,建议重试配网"},
+                {"ZB_GW_RELIABLE_ERR":"可靠上报失败,建议检查数据格式"},
+                {"ZB_GW_TRD_DEV_ERR":"三级设备上报数据失败,建议检查数据格式"},
+                {"ZB_GATEWAY_DEV_ID_ERR":"数据下发设备id不存在,建议重新配网"},
+                {"ZB_GATEWAY_UPDATE_SCE_LIST_ERR":"数据下发场景列表不存在,可能没有验证该dp,建议重新创建场景"},
+                {"ZB_GATEWAY_MALLOC_ERR":"GATEWAY层申请内存失败,内存不足,建议重启网关"},
+                {"ZB_GATEWAY_DATA_TYPE_ERR":"数据下发DP数据类型错误,检查下发数据格式"},
+                {"ZB_GATEWAY_TRD_DEV_DW_ERR":"三级设备数据下发失败,检查下发数据格式"},
+                {"ZB_GATEWAY_COM_DATALEN_ERR":"通用对接数据长度错误,检查下发数据格式"},
+                {"ZB_GATEWAY_SEND_DATA_FAILED":"GATEWAY层向HOST层发送数据失败,检查下发数据格式"},
+                {"ZB_GATEWAY_NCRYPT_DATA_FAILED":"数据加密失败"},
+                {"ZB_GATWAY_STDRELIABLE_DW_FAILED":"标准透传命令发送失败,检查下发数据格式"},
+                {"ZB_GATWAY_CMD_TYPE_NOT_SUPPORT":"下发命令类型不支持,检查下发数据格式"},
+                {"ZB_HOST_RCV_SLABSCMD_MSG_LEN_ERR":"下发数据包长度错误,检查下发数据格式"},
+                {"ZB_HSOT_DEV_REJOIN":"下发数据时,设备处于rejoin过程中,建议等会重试"},
+                {"ZB_HOST_CMD_TYPE_NOT_SUPPORT":"host命令类型不支持,检查下发数据格式"},
+                {"ZB_HOST_SEND_DATA_FAILED":"host底层发送数据失败,建议重试"},
+                {"ZB_GATEWAY_DEV_BIND_ERR":"绑定出错,建议重新配网"},
+                {"ZB_GATEWAY_SET_HB_STAT_FAILED":"GATEWAY层设置子设备心跳状态失败,该设备可能未适配"},
+                {"ZB_GATEWAY_JOIN_STAT_FALSE":"网关未开启配网,确保网关开启配网状态"},
+                {"ZB_GATEWAY_STAND_JOIN_ERR":"标准入网失败,该设备可能未适配"},
+                {"ZB_GATEWAY_DEV_NOT_SUPPORT":"子设备不支持,该设备可能未适配"},
+                {"ZB_HOST_RCV_JOIN_MSG_ERR":"zigbeehost层接收MSG长度异常,检查下发数据格式"},
+                {"ZB_GATEWAY_TRD_DEVID_ERR":"三级设备的设备ID错误,建议重新配网"},
+                {"ZB_GATEWAY_THR_DEV_TPE_ERR":"三级设备的设备类型错误,建议重新配网"},
+                {"ZB_GATEWAY_RS_PROFILE_NOT_SUPPORT":"接收ZIGBEE PROFILE不支持,该设备可能未适配"},
+                {"ZB_SUBDEV_LEAVE_SELF":"子设备主动离网,可能设备被重置"}
+            ]
+        },
+        {"name":"GW_BASE_LINKAGE", "offset":51,
+            "errcode":[
+                {"INIT_FAIL":"联动模块初始化失败"},
+                {"COND_CHECK_FAIL":"联动条件不满足"},
+                {"RULE_ID_NOT_FIND":"联动规则ID不存在,请检查规则是否存在"},
+                {"RULE_ID_DISABLE":"联动规则未启用,请检查规则是否启用"},
+                {"RULE_IS_UPDATED":"联动规在更新中,请稍后重试"},
+                {"FLOW_CNTL":"联动流控,可能触发过于频繁,请稍后再重试,也可能存在死循环,请检查联动是否死循环"},
+                {"THREAD_CREATE_FAIL":"联动线程创建失败"},
+                {"COND_CHECK_NO_ID_MATCH":"联动条件不满足(设备ID无匹配项)"},
+                {"COND_CHECK_NO_DP_MATCH":"联动条件不满足(条件DP无匹配项)"}
+            ]
+        },
+        {"name":"GW_ZG_SUB", "offset":52,
+            "errcode":[
+                {"ERR0":"错误0"},
+                {"ERR1":"错误1"},
+                {"ERR2":"错误2:FIB重启"},
+                {"ERR3":"错误3:升级重启"},
+                {"ERR4":"错误4:外部IO异常重启"},
+                {"ERR5":"错误5:低电压重启,可能是断电重启,也可能是供电问题"},
+                {"ERR6":"错误6:看门狗重启"},
+                {"ERR7":"错误7:软件主动重启"},
+                {"ERR8":"错误8:软件crash重启"},
+                {"ERR9":"错误9:Flash异常重启"},
+                {"ERR10":"错误10:不可恢复硬件异常重启"},
+                {"ERR11":"错误11:硬件内部CPU访问错误"},
+                {"ERR12":"错误12:掉电重启,可能是断电重启,也可能是供电问题"},
+                {"ERR13":"错误13"},
+                {"ERR14":"错误14"},
+                {"ERR15":"错误15"},
+                {"ERR16":"错误16:重启"},
+                {"ERR17":"错误17:失联"},
+                {"ERR18":"错误18:主动离网,请确认客户是否本地触发退网"},
+                {"ERR19":"错误19:被动离网,请确认是不是被APP或者遥控器移除"},
+                {"ERR20":"错误20:IO异常"},
+                {"ERR21":"错误21:内存泄漏"},
+                {"ERR22":"错误22:短地址改变"},
+                {"ERR23":"错误23:收到恢复出厂设置"},
+                {"ERR24":"错误24:收到F0命令"},
+                {"ERR25":"错误25:唤醒时间过长"},
+                {"ERR26":"错误26:收到异常恢复出厂设置"}
+            ]
+        },
+        {"name":"OS_ADAPTER_MUTEX", "offset":101,
+            "errcode":[
+                {"CREAT_FAILED":"创建失败"},
+                {"LOCK_FAILED":"lock失败"},
+                {"UNLOCK_FAILED":"unlock失败"},
+                {"RELEASE_FAILED":"释放失败"}
+            ]
+        },
+        {"name":"OS_ADAPTER_SEM", "offset":102,
+            "errcode":[
+                {"CREAT_FAILED":"创建失败"},
+                {"WAIT_FAILED":"wait失败"},
+                {"POST_FAILED":"post失败"},
+                {"RELEASE_FAILED":"释放失败"},
+                {"WAIT_TIMEOUT":"等待超时"}
+            ]
+        },
+        {"name":"OS_ADAPTER_QUEUE", "offset":103,
+            "errcode":[
+                {"CREAT_FAILED":"创建失败"},
+                {"SEND_FAIL":"send失败"},
+                {"RECV_FAIL":"recv失败"}
+            ]
+        },
+        {"name":"OS_ADAPTER_THRD", "offset":104,
+            "errcode":[
+                {"CREAT_FAILED":"创建失败"},
+                {"RELEASE_FAILED":"释放失败"},
+                {"JUDGE_SELF_FAILED":"判断是否self失败"}
+            ]
+        },
+        {"name":"OS_ADAPTER", "offset":105,
+            "errcode":[
+                {"COM_ERROR":"通用异常"},
+                {"INVALID_PARM":"参数非法"},
+                {"MALLOC_FAILED":"内存分配失败"},
+                {"NOT_SUPPORTED":"不支持操作"},
+                {"NETWORK_ERROR":"网络错误"},
+                {"AP_NOT_FOUND":"AP没有找到"},
+                {"AP_SCAN_FAILED":"AP扫描失败"},
+                {"AP_RELEASE_FAILED":"AP释放失败"},
+                {"CHAN_SET_FAILED":"信道设置失败"},
+                {"CHAN_GET_FAILED":"信道获取失败"},
+                {"IP_GET_FAILED":"IP获取失败"},
+                {"MAC_SET_FAILED":"MAC设置失败"},
+                {"MAC_GET_FAILED":"MAC获取失败"},
+                {"WORKMODE_SET_FAILED":"工作模式设置失败"},
+                {"WORKMODE_GET_FAILED":"工作模式获取失败"},
+                {"SNIFFER_SET_FAILED":"SNIFFER设置失败"},
+                {"AP_START_FAILED":"AP启动失败"},
+                {"AP_STOP_FAILED":"AP停止失败"},
+                {"APINFO_GET_FAILED":"AP信息获取失败"},
+                {"FAST_CONN_FAILED":"快连失败"},
+                {"CONN_FAILED":"连接失败"},
+                {"DISCONN_FAILED":"断开失败"},
+                {"RSSI_GET_FAILED":"RSSI获取失败"},
+                {"BSSID_GET_FAILED":"BSSID获取失败"},
+                {"STAT_GET_FAILED":"状态获取失败"},
+                {"CCODE_SET_FAILE":"CCODE设置失败"},
+                {"MGNT_SEND_FAILED":"管理包发送失败"},
+                {"MGNT_REG_FAILED":"管理包回调注册失败"},
+                {"WF_LPMODE_SET_FAILED":"Fi低功耗设置失败"},
+                {"CPU_LPMODE_SET_FAILED":"CPU低功耗模式设置失败"}
+            ]
+        },
+        {"name":"OS_ADAPTER_FLASH", "offset":106,
+            "errcode":[
+                {"READ_FAILED":"读取flash失败"},
+                {"WRITE_FAILED":"写入flash失败"},
+                {"ERASE_FAILED":"擦除flash失败"}
+            ]
+        },
+        {"name":"OS_ADAPTER_OTA", "offset":107,
+            "errcode":[
+                {"START_INFORM_FAILED":"升级启动通知失败"},
+                {"PKT_SIZE_FAILED":"升级包尺寸非法"},
+                {"PROCESS_FAILED":"升级包下载写入失败"},
+                {"VERIFY_FAILED":"升级包校验失败"},
+                {"END_INFORM_FAILED":"升级结束通知失败"}
+            ]
+        },
+        {"name":"OS_ADAPTER_WD", "offset":108,
+            "errcode":[
+                {"WD_INIT_FAILED":"watch dog初始化失败"}
+            ]
+        },
+        {"name":"OS_ADAPTER_GPIO", "offset":109,
+            "errcode":[
+                {"INOUT_SET_FAILED":"GPIO INOUT设置失败"},
+                {"MODE_SET_FAILED":"GPIO 模式设置失败"},
+                {"WRITE_FAILED":"GPIO 写入失败"},
+                {"IRQ_INIT_FAILED":"GPIO 中断初始化失败"}
+            ]
+        },
+        {"name":"OS_ADAPTER_UART", "offset":110,
+            "errcode":[
+                {"INIT_FAILED":"UART初始化失败"},
+                {"DEINIT_FAILED":"UART释放失败"},
+                {"SEND_FAILED":"UART发送失败"},
+                {"READ_FAILED":"UART接收失败"}
+            ]
+        },
+        {"name":"OS_ADAPTER_I2C", "offset":111,
+            "errcode":[
+                {"OPEN_FAILED":"I2C 打开失败"},
+                {"CLOSE_FAILED":"I2C 关闭失败"},
+                {"READ_FAILED":"I2C 读取失败"},
+                {"WRITE_FAILED":"I2C 写入失败"},
+                {"INVALID_PARM":"参数无效"},
+                {"INIT_FAILED":"初始化失败"},
+                {"DEINIT_FAILED":"释放失败"},
+                {"MODE_ERR":"模式错误"},
+                {"BUSY":"忙"},
+                {"TIMEOUT":"超时"},
+                {"MASTER_LOST_ARB":"主机仲裁失败"},
+                {"BUS_ERR":"总线错误"},
+                {"TRANS_ERR":"传输错误"},
+                {"ADDR_NO_ACK ":"无ACK"},
+                {"IRQ_INIT_FAILED ":"中断初始化失败"},
+                {"RESERVE1_ERR":"RESERVE ERR1"},
+                {"RESERVE2_ERR":"RESERVE ERR2"},
+                {"RESERVE3_ERR":"RESERVE ERR3"}
+            ]
+        },
+        {"name":"OS_ADAPTER_BLE", "offset":112,
+            "errcode":[
+                {"HANDLE_ERROR":"Ble 句柄错误"},
+                {"BUSY":"Ble 繁忙"},
+                {"TIMEOUT":"Ble 超时"},
+                {"RESERVED1":"Ble Reserved Error Code 1"},
+                {"RESERVED2":"Ble Reserved Error Code 2"},
+                {"RESERVED3":"Ble Reserved Error Code 3"},
+                {"INIT_FAILED":"Ble 初始化失败"},
+                {"DEINIT_FAILED":"Ble 释放失败"},
+                {"GATT_CONN_FAILED":"Ble GATT连接失败"},
+                {"GATT_DISCONN_FAILED":"Ble GATT断开失败"},
+                {"ADV_START_FAILED":"Ble 开启广播失败"},
+                {"ADV_STOP_FAILED":"Ble 停止广播失败"},
+                {"SCAN_START_FAILED":"Ble 开启扫描失败"},
+                {"SCAN_STAOP_FAILED":"Ble 停止扫描失败"},
+                {"SVC_DISC_FAILED":"Ble 服务发现失败"},
+                {"CHAR_DISC_FAILED":"Ble 特征值发现失败"},
+                {"DESC_DISC_FAILED":"Ble 特征值描述符发现失败"},
+                {"NOTIFY_FAILED":"Ble Peripheral Notify失败"},
+                {"INDICATE_FAILED":"Ble Peripheral Indicate失败"},
+                {"WRITE_FAILED":"Ble Central 写失败"},
+                {"READ_FAILED":"Ble Central 读失败"},
+                {"MTU_REQ_FAILED":"Ble Central MTU请求失败"},
+                {"MTU_REPLY_FAILED":"Ble Peripheral MTU 响应失败"},
+                {"CONN_PARAM_UPDATE_FAILED":"Ble 连接参数更新失败"},
+                {"CONN_RSSI_GET_FAILED":"Ble 连接信号强度获取失败"},
+                {"MESH_INVALID_OPCODE":"Ble Mesh 无效的opcode"},
+                {"MESH_INVALID_ELEMENT":"Ble Mesh 无效的element"},
+                {"MESH_INVALID_MODEL":"Ble Mesh 无效的model"},
+                {"MESH_INVALID_ADDR":"Ble Mesh 无效的source, virtual或destination address"},
+                {"MESH_INVALID_INDEX":"Ble Mesh 无效的序号，如：appkey index, netkey index等"},
+                {"MESH_NO_MEMORY":"Ble Mesh 内存占用已满，如：发包过快导致底层缓存过多等"},
+                {"MESH_APPKEY_NOT_BOUND_MODEL":"Ble Mesh Appkey未绑定错误"},
+                {"MESH_RESERVED1":"Ble Mesh Reserved Error Code 1"},
+                {"MESH_RESERVED2":"Ble Mesh Reserved Error Code 2"},
+                {"MESH_RESERVED3":"Ble Mesh Reserved Error Code 3"},
+                {"MESH_RESERVED4":"Ble Mesh Reserved Error Code 4"},
+                {"MESH_RESERVED5":"Ble Mesh Reserved Error Code 5"},
+                {"MESH_PROVISION_FAIL":"Ble Mesh 配网失败"},
+                {"MESH_COMPO_GET_FAIL":"Ble Mesh 获取Composition数据失败"},
+                {"MESH_MODEL_BIND_FAIL":"Ble Mesh 绑定model失败"},
+                {"MESH_APPKEY_ADD_FAIL":"Ble Mesh Appkey添加失败"},
+                {"MESH_NETKEY_ADD_FAIL":"Ble Mesh Netkey添加失败"},
+                {"MESH_APPKEY_BIND_FAIL":"Ble Mesh Appkey绑定失败"}
+            ]
+        },
+		{"name":"MID_TRANSPORT", "offset":113,
+            "errcode":[
+                {"INVALID_PARM":"参数无效"},
+                {"MALLOC_FAILED":"内存申请失败"},
+                {"DNS_PARSED_FAILED":"DNS解析失败，请检查网络是否正常"},
+                {"SOCK_CREAT_FAILED":"socket创建失败，请检查是否socket配置数量太小"},
+				{"SOCK_SET_REUSE_FAILED":"socket set reuse 失败"},
+                {"SOCK_SET_DISABLE_NAGLE_FAILED":"socket set disable nagle失败"},
+                {"SOCK_SET_KEEP_ALIVE_FAILED":"socket set keep alive失败"},
+                {"SOCK_SET_BLOCK_FAILED":"socket set block失败"},
+				{"SOCK_NET_BIND_FAILED":"socket net bind失败"},
+                {"SOCK_SET_TIMEOUT_FAILED":"socket set timeout失败"},
+                {"TCP_CONNECD_FAILED":"tcp连接失败，请检查网络是否正常"},
+                {"TCP_TLS_CONNECD_FAILED":"tcp tls连接失败，请检查网络是否正常"},
+				{"PACK_SEND_FAILED":"包发送失败，请检查网络是否正常"}
+            ]
+        },
+        {"name":"OS_ADAPTER_SPI", "offset":114,
+            "errcode":[
+                {"INVALID_PARM":"参数无效"},
+                {"INIT_FAILED":"初始化失败"},
+                {"DEINIT_FAILED":"释放失败"},
+                {"MODE_ERR":"模式错误"},
+                {"BUSY":"忙"},
+                {"DATA_LOST":"数据丢失"},
+                {"TIMEOUT":"超时"},
+                {"BUS_ERR":"总线错误"},
+                {"TRANS_ERR":"传输错误"},
+                {"IRQ_ERR ":"中断异常"},
+                {"RESERVE1_ERR":"RESERVE ERR1"},
+                {"RESERVE2_ERR":"RESERVE ERR2"},
+                {"RESERVE3_ERR":"RESERVE ERR3"}
+            ]
+        },
+        {"name":"OS_ADAPTER_PWM", "offset":115,
+            "errcode":[
+                {"INVALID_PARM":"参数无效"},
+                {"INIT_FAILED":"初始化失败"},
+                {"DEINIT_FAILED":"释放失败"},
+                {"MODE_ERR":"模式错误"},
+                {"BUSY":"忙"},
+                {"IRQ_INIT_FAILED ":"中断初始化失败"},
+                {"RESERVE1_ERR":"RESERVE ERR1"},
+                {"RESERVE2_ERR":"RESERVE ERR2"},
+                {"RESERVE3_ERR":"RESERVE ERR3"}
+            ]
+        },
+        {"name":"OS_ADAPTER_ADC", "offset":116,
+            "errcode":[
+                {"INVALID_PARM":"参数无效"},
+                {"INIT_FAILED":"初始化失败"},
+                {"DEINIT_FAILED":"释放失败"},
+                {"READ_FAILED":"ADC读取失败"},
+                {"MODE_ERR":"模式错误"},
+                {"BUSY":"忙"},
+                {"TIMEOUT":"超时"},
+                {"IRQ_INIT_FAILED ":"中断初始化失败"},
+                {"RESERVE1_ERR":"RESERVE ERR1"},
+                {"RESERVE2_ERR":"RESERVE ERR2"},
+                {"RESERVE3_ERR":"RESERVE ERR3"}
+            ]
+        },
+        {"name":"OS_ADAPTER_DAC", "offset":117,
+            "errcode":[
+                {"INVALID_PARM":"参数无效"},
+                {"INIT_FAILED":"初始化失败"},
+                {"DEINIT_FAILED":"释放失败"},
+                {"WRITE_FAILED":"DAC写失败"},
+                {"MODE_ERR":"模式错误"},
+                {"BUSY":"忙"},
+                {"TIMEOUT":"超时"},
+                {"IRQ_INIT_FAILED ":"中断初始化失败"},
+                {"RESERVE1_ERR":"RESERVE ERR1"},
+                {"RESERVE2_ERR":"RESERVE ERR2"},
+                {"RESERVE3_ERR":"RESERVE ERR3"}
+            ]
+        },
+        {"name":"OS_ADAPTER_I2S", "offset":118,
+            "errcode":[
+                {"INVALID_PARM":"参数无效"},
+                {"INIT_FAILED":"初始化失败"},
+                {"DEINIT_FAILED":"释放失败"},
+                {"WRITE_FAILED":"I2S写入失败"},
+                {"READ_FAILED":"I2S读取失败"},
+                {"MODE_ERR":"模式错误"},
+                {"BUSY":"忙"},
+                {"TIMEOUT":"超时"},
+                {"DATA_LOST":"数据丢失"},
+                {"TRANS_ERR":"传输错误"},
+                {"IRQ_INIT_FAILED ":"中断初始化失败"},
+                {"RESERVE1_ERR":"RESERVE ERR1"},
+                {"RESERVE2_ERR":"RESERVE ERR2"},
+                {"RESERVE3_ERR":"RESERVE ERR3"}
+            ]
+        },
+        {"name":"GW_SUB_MGR", "offset":119,
+            "errcode":[
+                {"INIT_FAIL":"子设备管理模块初始化失败"},
+                {"BIND_THREAD_CREATE_FAIL":"绑定线程创建失败"},
+                {"EXCEED_MAX_CNT":"超过子设备最大数目"},
+                {"NODE_CREATE_FAIL":"创建子设备节点失败"},
+                {"CLOUD_HTTP_BIND_FAIL":"与云端http交互失败"}
+            ]
+        },
+        {"name":"APP_TMP", "offset":120,
+            "errcode":[
+                {"xxx":"XXX"}
+            ]
+        },
+        {"name":"IMM_COM", "offset":121,
+            "errcode":[
+                {"MEM_PARTITION_FULL":"存储缓冲区满"}
+            ]
+        },
+        {"name":"IMM_CLOUD_STORAGE", "offset":122,
+            "errcode":[
+                {"ENCRYPT_KEY_UPDATED":"存储缓冲区满"},
+                {"STATUS_OFF":"云存储停止状态"},
+                {"UPLOAD_INTERRUPT_ERROR":"网络上报引起中断"},
+                {"EVENT_STATUS_INVALID":"事件状态错误"}
+            ]
+        }
+    ]
+}

@@ -1,0 +1,562 @@
+[
+    {
+        "tag": "TLS_MODE",
+        "group": "IoT",
+        "comment": "定义TLS的工作模式",
+        "range": "0：TLS_DISABLE\n2：TLS_TUYA_PSK_ONLY\n3：TLS_TUYA_ECC_PSK \n4：TLS_TUYA_ECC_ONLY\n5：TLS_TUYA_ECC_ONLY_NOSTRIP\n6：TLS_TUYA_ECC_CLIENT_AUTH",
+        "explain": ""
+    },
+    {
+        "tag": "TLS_SESSION",
+        "group": "IoT",
+        "comment": "是否需要保留TLS Session",
+        "range": "0: 不支持\n1:支持",
+        "explain": "如果保留，可以加快ecc模式下的TLS连接速度，但是需要消耗一定的内存资源，每个TLS Session需要200Byte左"
+    },
+    {
+        "tag": "TY_RTC",
+        "group": "IoT",
+        "comment": "是否使用RTC进行时间校准",
+        "range": "0: 不支持\n1:支持",
+        "explain": ""
+    },
+    {
+        "tag": "TY_WATCHDOG",
+        "group": "IoT",
+        "comment": "是否使用WATCHDOG来进行设备守护",
+        "range": "0: 不支持\n1:支持",
+        "explain": ""
+    },
+    {
+        "tag": "TY_REDUCE_BIN",
+        "group": "IoT",
+        "comment": "通过缩减LOG的方式，对固件体积进行优化",
+        "range": "0：不进行LOG优化\n1：进行LOG优化，忽略TRACE及一下级别的log\n2：进行LOG优化，忽略DEBUG及一下级别的log",
+        "explain": ""
+    },
+    {
+        "tag": "TY_MSGQ_THREAD_STACK_SIZE",
+        "group": "IoT",
+        "comment": "消息队列的线程堆栈大小，根据资源的充裕程度调整",
+        "range": "4*1024~用户按照自愿自定义",
+        "explain": "当TLS模式为双向认证的时候，需要额外增加8*1024"
+    },
+    {
+        "tag": "TY_MSGQ_DEPTH",
+        "group": "IoT",
+        "comment": "消息队列的深度，根据资源的充裕程度调整",
+        "range": 100.0,
+        "explain": "当TLS模式为双向认证的时候，需要额外增加8*1024"
+    },
+    {
+        "tag": "TY_TIMER_THREAD_STACK_SIZE",
+        "group": "IoT",
+        "comment": "定时器的线程堆栈大小",
+        "range": "4*1024~用户按照自愿自定义",
+        "explain": "根据资源的充裕程度调整，当TLS模式为双向认证的时候，需要额外增加8*1024"
+    },
+    {
+        "tag": "TY_WORKQ_THREAD_STACK_SIZE",
+        "group": "IoT",
+        "comment": "工作队列的线程堆栈大小",
+        "range": "5*1024~用户按照自愿自定义",
+        "explain": "根据资源的充裕程度调整，当TLS模式为双向认证的时候，需要额外增加8*1024"
+    },
+    {
+        "tag": "TY_HEAP6",
+        "group": "IoT",
+        "comment": "支持涂鸦自研heap管理",
+        "range": "0: 不支持\n1:支持",
+        "explain": "推广至所有RTOS平台支持"
+    },
+    {
+        "tag": "TY_MEM_POOL",
+        "group": "IoT",
+        "comment": "支持memory pool",
+        "range": "0: 不支持\n1:支持",
+        "explain": "RTOS平台使用tuya heap6，不需要memory pool，但是Linux平台需要"
+    },
+    {
+        "tag": "KV_FILE",
+        "group": "IoT",
+        "comment": "数据存储存储介质",
+        "range": "0: flash\n1:file",
+        "explain": "KV存储于flash还是文件系统"
+    },
+    {
+        "tag": "KV_KEY_SEED",
+        "group": "IoT",
+        "comment": "生成kv存储密码随机种子",
+        "range": "8210_2M",
+        "explain": "特殊兼容需要，新平台不需要"
+    },
+    {
+        "tag": "KV_KEY_PROJECT_NAME",
+        "group": "IoT",
+        "comment": "生成kv存储密码随机种子",
+        "range": "",
+        "explain": "特殊兼容需要，新平台不需要"
+    },
+    {
+        "tag": "DB_STORAGE",
+        "group": "IoT",
+        "comment": "文件存储介质",
+        "range": "0: flash\n1:file",
+        "explain": "flash文件系统还是runtime层提供的文件系统"
+    },
+    {
+        "tag": "TY_TIMER_LOCAL",
+        "group": "IoT",
+        "comment": "本地定时",
+        "range": "0: 不支持\n1:支持",
+        "explain": "本地定时任务"
+    },
+    {
+        "tag": "TY_TIMER_ASTRO",
+        "group": "IoT",
+        "comment": "天文定时器",
+        "range": "0: 不支持\n1:支持",
+        "explain": "根据用户所在的经纬度的日出、日落时间，来进行预约操作"
+    },
+    {
+        "tag": "TY_TIMER_RANDOM",
+        "group": "IoT",
+        "comment": "随机定时器",
+        "range": "0: 不支持\n1:支持",
+        "explain": "指定时间间隔以内随机选择时间执行预约动作"
+    },
+    {
+        "tag": "TY_TIMER_COUNTDOWN",
+        "group": "IoT",
+        "comment": "倒计时定时器",
+        "range": "0: 不支持\n1:支持",
+        "explain": "当前直接指定一个时间间隔倒计时到期之后执行预约动作"
+    },
+    {
+        "tag": "TY_QRCODE",
+        "group": "IoT",
+        "comment": "支持扫码激活",
+        "range": "0: 不支持\n1:支持",
+        "explain": ""
+    },
+    {
+        "tag": "TY_MQTT_THREAD_STACK_SIZE",
+        "group": "IoT",
+        "comment": "MQTT任务的线程堆栈大小",
+        "range": "4*1024~用户按照自愿自定义",
+        "explain": "根据资源的充裕程度调整，当TLS模式为双向认证的时候，需要额外增加8*1024"
+    },
+    {
+        "tag": "TY_MQTT_QOS1_QUEUE_NUM",
+        "group": "IoT",
+        "comment": "MQTT QoS1 queue数量",
+        "range": "8~用户自定义",
+        "explain": "特殊需求可定制"
+    },
+    {
+        "tag": "TY_MQTT_QOS1_TIMEOUT",
+        "group": "IoT",
+        "comment": "MQTT QoS1 超时时间",
+        "range": "6~用户自定义",
+        "explain": "特殊需求可定制"
+    },
+    {
+        "tag": "TY_HTTP_CHUNK_ENABLE",
+        "group": "IoT",
+        "comment": "是否支持HTTP CHUNK",
+        "range": "0: 不支持\n1:支持",
+        "explain": "处理HTTP CHUNK response，特殊需求可定制"
+    },
+    {
+        "tag": "TY_HTTP_CHUNK_BUFFER",
+        "group": "IoT",
+        "comment": "HTTP chunk buffer",
+        "range": "0：不支持HTTP chunk\n10*1024~30*1024：支持HTTP chunk，设置HTTP chunk范围",
+        "explain": "让不同的系统可以合理的设置buffer，特殊需求可定制"
+    },
+    {
+        "tag": "TY_GPIO_TEST_V2",
+        "group": "IoT",
+        "comment": "支持gpiotest V2版本",
+        "range": "0: 不支持\n1:支持",
+        "explain": "强制使用v2版本，所有模组测试序列上云，gpiotest版本，v1：本地写死测试序列；v2：云端拉去对应测试序列"
+    },
+    {
+        "tag": "TY_GET_RFTEST_STAT",
+        "group": "IoT",
+        "comment": "是否支持rf校准测试",
+        "range": "0: 不支持\n1:支持",
+        "explain": "特殊定制才会开启"
+    },
+    {
+        "tag": "TY_PRODUCT_TEST",
+        "group": "IoT",
+        "comment": "是否支持成品产测",
+        "range": "0: 不支持\n1:支持",
+        "explain": "因为扫描方式和老的产测进入方式存在差异，需要兼容处理，后续可以完全取代老的。特殊定制才会开启"
+    },
+    {
+        "tag": "TY_LAN_MOD",
+        "group": "IoT",
+        "comment": "涂鸦局域网协议技术栈",
+        "range": "0: 不支持\n1:支持",
+        "explain": "特殊定制才会关闭。支持局域网发现、局域网配网、局域网绑定、局域网控制以及一些其他的局域网协议功能。支持用户自定义开启、关闭局域网。"
+    },
+    {
+        "tag": "TY_LAN_RTSP",
+        "group": "IoT",
+        "comment": "局域网扩展通道进行业务拓展",
+        "range": "0: 不支持\n1:支持",
+        "explain": "特殊定制才会开启。局域网扩展协议支持在局域网扩展通道进行业务拓展，局域网rtsp协议传输视频数据流就是其中一种主要能力"
+    },
+    {
+        "tag": "TY_GOOGLE_HOME_LOCAL_CTRL",
+        "group": "IoT",
+        "comment": "在局域网内被google local home发现",
+        "range": "0: 不支持\n1:支持",
+        "explain": "局域网扩展协议支持在局域网内被google local home发现，并能够进行控制"
+    },
+    {
+        "tag": "ENABLE_LAN_DEV",
+        "group": "IoT",
+        "comment": "局域网支持网关联动",
+        "range": "0: 不支持\n1:支持",
+        "explain": "局域网支持网关联动"
+    },
+    {
+        "tag": "ENABLE_LAN_LINKAGE",
+        "group": "IoT",
+        "comment": "局域网支持网关联动",
+        "range": "0: 不支持\n1:支持",
+        "explain": "局域网支持网关联动"
+    },
+    {
+        "tag": "TY_BT_MOD",
+        "group": "IoT",
+        "comment": "涂鸦蓝牙协议技术栈",
+        "range": "0: 不支持\n1:支持",
+        "explain": "涂鸦蓝牙协议技术栈，支持蓝牙配网、蓝牙绑定、蓝牙托底激活、蓝牙控制、蓝牙校时以及一些其他的蓝牙协议功能。支持用户自定义开启、关闭蓝牙。取决于方案"
+    },
+    {
+        "tag": "TY_BT_VER",
+        "group": "IoT",
+        "comment": "涂鸦蓝牙协议版本",
+        "range": "3: 版本v3\n4: 版本v4",
+        "explain": "跟随涂鸦APP蓝牙版本，临时使用，后续会废除。"
+    },
+    {
+        "tag": "TY_BT_REMOTE_CTRL",
+        "group": "IoT",
+        "comment": "蓝牙遥控器协议",
+        "range": "0: 不支持\n1:支持",
+        "explain": ""
+    },
+    {
+        "tag": "TY_BT_MESH",
+        "group": "IoT",
+        "comment": "蓝牙mesh协议",
+        "range": "0: 不支持\n1:支持",
+        "explain": "特殊定制才会开启，理论上复合网关才会需要"
+    },
+    {
+        "tag": "TY_BT_VIRTUAL",
+        "group": "IoT",
+        "comment": "虚拟蓝牙协议",
+        "range": "0: 不支持\n1:支持",
+        "explain": "虚拟蓝牙协议，在复合通信模式下，需要蓝牙协议能力但是又没有蓝牙硬件的情况使用。特殊定制才会开启，理论上可以不需要此接口，仅需在hal层实现特殊的蓝牙报文接收处理机制即可。"
+    },
+    {
+        "tag": "TY_WIRED_MOD",
+        "group": "IoT",
+        "comment": "涂鸦有线协议技术栈",
+        "range": "0: 不支持\n1:支持",
+        "explain": "涂鸦有线协议技术栈，支持有线、系统自维护网络类型网络连接。取决于方案"
+    },
+    {
+        "tag": "TY_WIFI_MOD",
+        "group": "IoT",
+        "comment": "涂鸦无线协议技术栈",
+        "range": "0: 不支持\n1:支持",
+        "explain": "涂鸦无线协议技术栈，支持有线、系统自维护网络类型网络连接。取决于方案"
+    },
+    {
+        "tag": "TY_WIFI_PROTECTION",
+        "group": "IoT",
+        "comment": "Wi-Fi保护",
+        "range": "0: 不支持\n1:支持",
+        "explain": "支持设置多个Wi-Fi ssid和passwd，并在当前Wi-Fi连接断开之后，连接备用的Wi-Fi ssid。需要使能ECDH密钥交互算法，当此功能打开的时候，自动开启。"
+    },
+    {
+        "tag": "TY_WIFI_FFC",
+        "group": "IoT",
+        "comment": "",
+        "range": "0: 不支持\n1:支持",
+        "explain": ""
+    },
+    {
+        "tag": "TY_PEGASUS_NETCFG",
+        "group": "IoT",
+        "comment": "闪电配网",
+        "range": "0: 不支持\n1:支持",
+        "explain": "支持Wi-Fi闪电配网，通过已经配网设备，给待配网设备进行免密、免解除配网"
+    },
+    {
+        "tag": "TY_FFS_NETCFG",
+        "group": "IoT",
+        "comment": "亚马逊配网",
+        "range": "0: 不支持\n1:支持",
+        "explain": "支持通过亚马逊alex音箱进行免密配网"
+    },
+    {
+        "tag": "TY_EZ_NETCFG_CHNL_SWITCH_INTVEL",
+        "group": "IoT",
+        "comment": "ez配网切换信道时间间隔",
+        "range": "100ms-用户自定义间隔",
+        "explain": "ez配网切换信道时间间隔，不同平台切换间隔需求不一样"
+    },
+    {
+        "tag": "TY_CNIOT_MOD",
+        "group": "IoT",
+        "comment": "涂鸦蜂窝网络技术栈",
+        "range": "0: 不支持\n1:支持",
+        "explain": "涂鸦蜂窝网络技术栈，支持蜂窝网络拨号、连接、卡管理等功能。取决于方案"
+    },
+    {
+        "tag": "TUYA_OPERATOR_TYPE",
+        "group": "IoT",
+        "comment": "选择运营商",
+        "range": "#define TUYA_OPERATOR_DISABLE 0x0\n#define TUYA_OPERATOR_CUCC 0x01\n#define TUYA_OPERATOR_CTCC 0x02\n#define TUYA_OPERATOR_CMCC 0x04\n#define TUYA_OPERATOR_CMCC_ANDLINK      0x08\n#define TUYA_OPERATOR_ALL               (TUYA_OPERATOR_CUCC | TUYA_OPERATOR_CTCC | TUYA_OPERATOR_CMCC)",
+        "explain": "支持不同的运营商接入，特殊定制才会开启"
+    },
+    {
+        "tag": "TY_LWIP",
+        "group": "IoT",
+        "comment": "支持涂鸦自研lwip组件",
+        "range": "0: 不支持\n1:支持",
+        "explain": "取决于平台"
+    },
+    {
+        "tag": "TY_HOSTAPD",
+        "group": "IoT",
+        "comment": "支持涂鸦自研hostapd组件",
+        "range": "0: 不支持\n1:支持",
+        "explain": "取决于平台"
+    },
+    {
+        "tag": "ATTRIBUTE_WAEK",
+        "group": "IoT",
+        "comment": "weak关键字",
+        "range": "__attribute__((weak))",
+        "explain": "取决于平台"
+    },
+    {
+        "tag": "LITTLE_END",
+        "group": "IoT",
+        "comment": "大小端",
+        "range": "0: 大端\n1: 小端",
+        "explain": "取决于平台"
+    },
+    {
+        "tag": "OPERATING_SYSTEM",
+        "group": "IoT",
+        "comment": "操作系统类型",
+        "range": "#define SYSTEM_SMALL_MEMORY_BEGIN 0 \n#define SYSTEM_REALTEK8710_1M           1\n#define SYSTEM_REALTEK8710_2M           2\n#define SYSTEM_FREERTOS                 98\n#define SYSTEM_SMALL_MEMORY_END         99\n#define SYSTEM_LINUX                    100\n#define SYSTEM_LITEOS                   120",
+        "explain": "取决于平台"
+    },
+    {
+        "tag": "ENABLE_STATION_AP_MODE",
+        "group": "IoT",
+        "comment": "是否支持station ap模式",
+        "range": "0: 不支持\n1:支持",
+        "explain": "取决于平台"
+    },
+    {
+        "tag": "AP_SNIFFER_EN",
+        "group": "IoT",
+        "comment": "是否支持ap模式下sniffer",
+        "range": "0: 不支持\n1:支持",
+        "explain": "取决于平台，目前基本不用了。"
+    },
+    {
+        "tag": "ENABLE_AP_FAST_CONNECT",
+        "group": "IoT",
+        "comment": "是否支持快连AP",
+        "range": "0: 不支持\n1:支持",
+        "explain": "取决于平台"
+    },
+    {
+        "tag": "ENABLE_SECURITY_CHIP",
+        "group": "IoT",
+        "comment": "是否支持安全芯片",
+        "range": "0: 不支持\n1:支持",
+        "explain": "取决于平台，每个平台可能支持安全芯片的类型不一样，实现也不一样。"
+    },
+    {
+        "tag": "ENABLE_EXTRA_MQTT",
+        "group": "GW",
+        "comment": "使能外部MQTT回调注册",
+        "range": "0：不支持外部MQTT回调注册\n1：支持外部MQTT回调注册",
+        "explain": "必须支持"
+    },
+    {
+        "tag": "ENABLE_LAN_ENCRYPTION",
+        "group": "GW",
+        "comment": "使能局域网加密",
+        "range": "0：不支持局域网加密\n1：支持局域网加密",
+        "explain": "必须支持"
+    },
+    {
+        "tag": "ENABLE_LOCAL_LINKAGE",
+        "group": "GW",
+        "comment": "使能本地联动",
+        "range": "0：不支持本地联动\n1：支持本地联动",
+        "explain": "根据设备资源选择"
+    },
+    {
+        "tag": "ENABLE_SUBDEVICE",
+        "group": "GW",
+        "comment": "使能子设备管理",
+        "range": "0：不支持子设备管理\n1：支持子设备管理",
+        "explain": "网关必须支持"
+    },
+    {
+        "tag": "ENABLE_SIGMESH",
+        "group": "GW",
+        "comment": "使能ENABLE_SIGMESH",
+        "range": "0：不支持SIG MESH子设备\n1：支持SIG MESH子设备",
+        "explain": "网关必须支持"
+    },
+    {
+        "tag": "ENABLE_ENGINEER_TO_NORMAL",
+        "group": "GW",
+        "comment": "工程模式",
+        "range": "0：不支持工程模式\n1：支持工程模式",
+        "explain": "根据需要选择"
+    },
+    {
+        "tag": "RELIABLE_TRANSFER",
+        "group": "GW",
+        "comment": "使能可靠数据传输",
+        "range": "0：不支持可靠数据传输\n1：支持可靠数据传输",
+        "explain": "网关必须支持"
+    },
+    {
+        "tag": "ENABLE_LAN_LINKAGE_MASTER",
+        "group": "GW",
+        "comment": "使能局域网联动master",
+        "range": "0：不支持局域网联动master\n1：支持局域网联动master",
+        "explain": "根据设备资源选择"
+    },
+    {
+        "tag": "LOCAL_SCENE",
+        "group": "GW",
+        "comment": "使能本地场景",
+        "range": "0：不支持本地场景\n1：支持本地场景",
+        "explain": "根据设备资源选取"
+    },
+    {
+        "tag": "ENABLE_ALARM",
+        "group": "GW",
+        "comment": "使能安防能力",
+        "range": "0：不支持安防能力\n1：支持安防能力",
+        "explain": "网关必须支持"
+    },
+    {
+        "tag": "TUYA_LARGE_SCALE_HEARTBEET",
+        "group": "GW",
+        "comment": "使能子设备大规模心跳",
+        "range": "0：不支持子设备大规模心跳\n1：支持子设备大规模心跳",
+        "explain": "网关必须支持"
+    },
+    {
+        "tag": "ENABLE_ZIGBEE",
+        "group": "GW",
+        "comment": "涂鸦ZIGBEE子设备管理",
+        "range": "0：不支持涂鸦ZIGBEE子设备接入\n1：支持涂鸦ZIGBEE子设备接入",
+        "explain": "根据需要选择（需要搭配ZIGBEE模组固件使用）"
+    },
+    {
+        "tag": "ENABLE_BLE_MESH",
+        "group": "GW",
+        "comment": "涂鸦蓝牙子设备管理",
+        "range": "0：不支持涂鸦蓝牙子设备接入\n1：支持涂鸦蓝牙子设备接入",
+        "explain": "根据需要选择（需要搭配蓝牙模组固件使用）"
+    },
+    {
+        "tag": "ENABLE_AI_SPEAKER",
+        "group": "GW",
+        "comment": "使能智能语音",
+        "range": "0：不支持智能语音\n1：支持智能语音",
+        "explain": "根据需要选择"
+    },
+    {
+        "tag": "ENABLE_CENTRAL_CONTROL",
+        "group": "GW",
+        "comment": "使能中控",
+        "range": "0：不支持中控\n1：支持中控",
+        "explain": "根据需要选择"
+    },
+    {
+        "tag": "ENABLE_REPEATER_ROUTER",
+        "group": "GW",
+        "comment": "使能中继/路由器",
+        "range": "否",
+        "explain": "根据需要选择"
+    },
+    {
+        "tag": "WIFI_CONTROL_SUPPORT",
+        "group": "GW",
+        "comment": "一键配网",
+        "range": "否",
+        "explain": "根据需要选择"
+    },
+    {
+        "tag": "ENABLE_MQTT_P2P",
+        "group": "IPC",
+        "comment": "使能P2P 3.0",
+        "range": "0: 不支持\n1:支持",
+        "explain": "使能P2P 3.0"
+    },
+    {
+        "tag": "ENABLE_MQTT_WEBRTC",
+        "group": "IPC",
+        "comment": "使能webrtc功能",
+        "range": "0: 不支持\n1:支持",
+        "explain": "使能webrtc功能"
+    },
+    {
+        "tag": "ENABLE_CLOUD_STREAM",
+        "group": "IPC",
+        "comment": "使能推流网关功能",
+        "range": "0: 不支持\n1:支持",
+        "explain": "使能推流网关功能"
+    },
+    {
+        "tag": "ENABLE_CLOUD_OPERATION",
+        "group": "IPC",
+        "comment": "云端存储接口",
+        "range": "0: 不支持\n1:支持",
+        "explain": "云端存储接口"
+    },
+    {
+        "tag": "ENABLE_REMOTE_EVENT",
+        "group": "IPC",
+        "comment": "他设备远程联动云存储录像",
+        "range": "0: 不支持\n1:支持",
+        "explain": "其他设备远程联动云存储录像"
+    },
+    {
+        "tag": "ENABLE_FACE_DETECTION",
+        "group": "IPC",
+        "comment": "本地人脸识别",
+        "range": "0: 不支持\n1:支持",
+        "explain": "本地人脸识别"
+    },
+    {
+        "tag": "ENABLE_AI_DETECT",
+        "group": "IPC",
+        "comment": "涂鸦云端的AI检测服务",
+        "range": "0: 不支持\n1:支持",
+        "explain": "涂鸦云端的AI检测服务"
+    }
+]
