@@ -1,0 +1,24 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2023-01-13T14:13:39+08:00",
+  "id": "tuyaos_demo_quickstart",
+  "duration": 0,
+  "title": "tuyaos_demo_quickstart",
+  "summary": "quickstart demo",
+  "source": "README.md",
+  "theme": "",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "quickstart",
+    "markdown"
+  ],
+  "tags": [
+    "web"
+  ],
+  "url": "tuyaos_demo_quickstart"
+}

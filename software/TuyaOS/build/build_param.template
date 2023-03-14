@@ -1,0 +1,41 @@
+AR = $(COMPILE_PREX)ar
+CC = $(COMPILE_PREX)gcc
+NM = $(COMPILE_PREX)nm
+CPP = $(COMPILE_PREX)g++
+STRIP = $(COMPILE_PREX)strip
+OBJCOPY = $(COMPILE_PREX)objcopy
+OBJDUMP = $(COMPILE_PREX)objdump
+RANLIB = $(COMPILE_PREX)ranlib
+CXX = $(COMPILE_PREX)g++
+
+
+CFLAGS =
+CFLAGS += -pipe -D_REENTRANT -Wall -Wno-unused-result
+ifeq ($(CONFIG_OPERATING_SYSTEM), 100)
+CFLAGS += -fPIC
+endif
+
+ifeq ($(CONFIG_TUYA_IOT_DEBUG), 1)
+CFLAGS += -g
+endif
+
+ifdef PRJ_DEFINES
+CFLAGS += $(PRJ_DEFINES)
+endif
+
+ifdef COMPILE_INCLUDE
+CFLAGS += -I $(COMPILE_INCLUDE)
+endif
+
+ifdef COMPILE_LIB
+export LD_LIBRARY_PATH=$(COMPILE_LIB)
+endif
+
+LINKFLAGS =
+ifeq ($(CONFIG_OPERATING_SYSTEM), 100) 
+LINKFLAGS += -lpthread -lm
+endif
+
+ifdef PRJ_LINKS
+LINKFLAGS += $(PRJ_LINKS)
+endif

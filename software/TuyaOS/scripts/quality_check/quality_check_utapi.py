@@ -27,7 +27,7 @@ def _get_ut_func_json(html_path):
     top_level = soup \
                 .select("body > table:nth-child(1) > tr:nth-child(3) > td > table > tr:nth-child(1) > td.headerValue > a:nth-child(2)")[0] \
                 .get_text()
-    module_name = top_level.split('/components/')[1].split('/')[0]
+    module_name = top_level.split('components/')[1].split('/')[0]
     c_file = html_path.split('/')[-1][:-17]
 
     json_data = {}

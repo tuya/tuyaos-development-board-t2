@@ -1,0 +1,716 @@
+{"TuyaEmbeddedErrcode":
+    [
+        {"name":"global", "offset":0,
+            "errcode":[
+                {"OK":"Success"},
+                {"COM_ERROR":"Common error"},
+                {"INVALID_PARM":"Invalid request parameter."},
+                {"MALLOC_FAILED":"Failed to allocate memory."},
+                {"NOT_SUPPORTED":"Not supported."},
+                {"NETWORK_ERROR":"Network error."},
+                {"NOT_FOUND":"No object is found."},
+                {"CR_CJSON_ERR":"Failed to create a JSON object."},
+                {"CJSON_PARSE_ERR":"Failed to parse JSON."},
+                {"CJSON_GET_ERR":"Failed to get the JSON object."},
+                {"CR_MUTEX_ERR":"Failed to create a semaphore."},
+                {"SOCK_ERR":"Failed to create a socket."},
+                {"SET_SOCK_ERR":"Failed to set the socket."},
+                {"SOCK_CONN_ERR":"Failed to connect to the socket."},
+                {"SEND_ERR":"Transmission failed."},
+                {"RECV_ERR":"Reception failed."},
+                {"RECV_DA_NOT_ENOUGH":"The data received is incomplete."},
+                {"KVS_WR_FAIL":"Failed to write key-value data."},
+                {"KVS_RD_FAIL":"Failed to read key-value data."},
+                {"CRC32_FAILED":"CRC check failed."},
+                {"TIMEOUT":"Timeout"},
+                {"INIT_MORE_THAN_ONCE":"Initialization is performed more than once."},
+                {"INDEX_OUT_OF_BOUND":"Index out of bounds"},
+                {"RESOURCE_NOT_READY":"Resources are not ready."},
+                {"EXCEED_UPPER_LIMIT":"Upper limit is exceeded."},
+                {"FILE_NOT_FIND":"File is not found."},
+                {"FILE_IS_FULL":"File is full."},
+                {"FILE_OPEN_FAILED":"Failed to open the file."},
+                {"FILE_READ_FAILED":"Failed to read the file."},
+                {"FILE_WRITE_FAILED":"Failed to write the file."},
+                {"NOT_EXIST":"Not exist."},
+                {"BUFFER_NOT_ENOUGH":"Cache is insufficient."},
+                {"ROUTER_NOT_FOUND":"Router is not found."},
+                {"AUTHENTICATION_NOT_FOUND":"Not authenticated"},
+                {"AUTHENTICATION_FAIL":"Authentication failed."},
+                {"MSG_OUT_OF_LIMIT":"Message exceeds the upper limit."},
+                {"VERSION_FMT_ERR":"Version mismatch."}
+            ]
+        },
+        {"name":"base_os_adapter", "offset":1,
+            "errcode":[
+                {"REG_NULL_ERROR":"Failed to register the system adapter."}
+            ]
+        },
+        {"name":"base_utilities", "offset":2,
+            "errcode":[
+                {"PARTITION_EMPTY":"No linked list is available."},
+                {"PARTITION_FULL":"Linked list is full."},
+                {"PARTITION_NOT_FOUND":"Linked list is not found."}
+            ]
+        },
+        {"name":"base_security", "offset":3,
+            "errcode":[
+                {"CRC32_FAILED":"CRC32 check failed."}
+            ]
+        },
+        {"name":"base_log_mng", "offset":4,
+            "errcode":[
+                {"DONOT_FOUND_MODULE":"Logging module is not found."},
+                {"PRINT_LOG_LEVEL_HIGHER":"Log level is low."},
+                {"FORMAT_STRING_FAILED":"Failed to format log strings."},
+                {"LOG_SEQ_OPEN_FILE_FAIL":"Failed to open the sequential log file."},
+                {"LOG_SEQ_WRITE_FILE_FAIL":"Failed to write the sequential log file."},
+                {"LOG_SEQ_FILE_FULL":"The sequential log file is full."},
+                {"LOG_SEQ_FILE_NOT_EXIST":"The sequential log file does not exist."},
+                {"LOG_SEQ_NAME_INVALIDE":"The name of the sequential log file is invalid."},
+                {"LOG_SEQ_CREATE_FAIL":"Failed to create the sequential log file."}
+            ]
+        },
+        {"name":"base_workq", "offset":5,
+            "errcode":[
+            ]
+        },
+        {"name":"base_timeq", "offset":6,
+            "errcode":[
+                {"TIMERID_EXIST":"The timer ID already exists."},
+                {"TIMERID_NOT_FOUND":"The specified timer ID is not found."},
+                {"TIMERID_UNVALID":"Invalid timer ID."},
+                {"GET_IDLE_TIMERID_ERROR":"Error in getting the ID of an idle timer."}
+            ]
+        },
+        {"name":"base_msgq", "offset":7,
+            "errcode":[
+                {"NOT_FOUND":"Message is not found."},
+                {"LIST_EMPTY":"List is empty."}
+            ]
+        },
+        {"name":"mid_http", "offset":8,
+            "errcode":[
+                {"BUF_NOT_ENOUGH":"Buffer size is insufficient."},
+                {"URL_PARAM_OUT_LIMIT":"URL exceeds the length limit."},
+                {"OS_ERROR":"System error"},
+                {"PR_REQ_ERROR":"Error in preparing the request. Check the network health."},
+                {"SD_REQ_ERROR":"Error in sending the request. Check the network health."},
+                {"RD_ERROR":"Read error. Check the network health."},
+                {"AD_HD_ERROR":"Error in adding the header."},
+                {"GET_RESP_ERROR":"Error in getting the response."},
+                {"AES_INIT_ERR":"Error in initializing AES."},
+                {"AES_OPEN_ERR":"Error in opening AES."},
+                {"AES_SET_KEY_ERR":"Error in setting AES key."},
+                {"AES_ENCRYPT_ERR ":"Error in AES encryption."},
+                {"CR_HTTP_URL_H_ERR":"Error in creating HTTP URL header."},
+                {"HTTPS_HANDLE_FAIL":"Error in HTTPS handle."},
+                {"HTTPS_RESP_UNVALID":"Invalid HTTPS response."},
+                {"NO_SUPPORT_RANGE":"Resumable transfer is not supported."}
+            ]
+        },
+        {"name":"mid_mqtt", "offset":9,
+            "errcode":[
+                {"DEF_ERR":"Definition failed."},
+                {"INVALID_PARM":"Invalid parameter."},
+                {"MALLOC_FAILED":"Failed to request memory."},
+                {"DNS_PARSED_FAILED":"Failed to parse DNS. Check the network health."},
+                {"SOCK_CREAT_FAILED":"Failed to create a socket."},
+                {"SOCK_SET_FAILED":"Failed to set the socket."},
+                {"TCP_CONNECD_FAILED":"TCP connection failed. Check the network health."},
+                {"TCP_TLS_CONNECD_FAILED":"TCP connection with TLS failed. Check the network health."},
+                {"PACK_SEND_FAILED":"Packet transmission failed. Check the network health."},
+                {"RECV_DATA_FORMAT_WRONG":"Error in the format of received data."},
+                {"MSGID_NOT_MATCH":"The msgid of the received data is not found."},
+                {"START_TM_MSG_ERR":"Error in the start event massage."},
+                {"OVER_MAX_MESSAGE_LEN":"Message exceeds the length limit."},
+                {"PING_SEND_ERR":"Ping transmission failed. Check the network health."},
+                {"PUBLISH_TIMEOUT":"Publish timeout. Check the network health."}
+            ]
+        },
+        {"name":"mid_tls", "offset":10,
+            "errcode":[
+                {"NET_SOCKET_ERROR":"Failed to open a socket."},
+                {"NET_CONNECT_ERROR":"The connection to the given server/port failed."},
+                {"UNKNOWN_HOST_ERROR":"Failed to get an IP address for the given hostname."},
+                {"CONNECTION_ERROR":"TLS connection failed. Check the network health."},
+                {"DRBG_ENTROPY_ERROR":"Failed to generate a random seed for Mbed TLS."},
+                {"X509_ROOT_CRT_PARSE_ERROR":"Failed to parse X.509 root certificate."},
+                {"X509_DEVICE_CRT_PARSE_ERROR":"Failed to parse X.509 device certificate."},
+                {"CTR_DRBG_ENTROPY_SOURCE_ERROR":"Entropy source failure."},
+                {"PK_PRIVATE_KEY_PARSE_ERROR":"Failed to parse the key."}
+            ]
+        },
+        {"name":"svc_wifi", "offset":11,
+            "errcode":[
+                {"RECV_CONTINUE":"Continue receiving the packet for pairing."},
+                {"DONOT_FOUND_MODULE":"Module is not found."},
+                {"PEGASUS_DECODE_FAILED":"Failed to parse the packet for Pegasus pairing."},
+		        {"NEED_FACTORY_RESET":"Failed to verify Wi-Fi initialization configuration. Factory reset is needed."}
+            ]
+        },
+        {"name":"svc_online_log", "offset":12,
+            "errcode":[
+                ]
+        },
+        {"name":"svc_mf_test", "offset":13,
+            "errcode":[
+                {"UPDATE_DATA_LEN_EXECED":"The update file exceeds the length limit."},
+                {"UPDATE_CRC_ERROR":"CRC check on the update failed."}
+            ]
+        },
+        {"name":"svc_dp", "offset":14,
+            "errcode":[
+                {"ALREADY_PROCESS":"DP has been processed."},
+                {"ID_NOT_FOUND":"DP ID is not found. Check the correctness of the reported DP ID."},
+                {"TP_NOT_MATCH":"The DP's data type is not matched. Check the correctness of the data type."},
+                {"DEVICE_NOT_BINDED":"Device is not bound."},
+                {"TYPE_PROP_ILLEGAL":"Invalid property. Enum values do not exist."},
+                {"NW_INVALID":"Network is not available. Check the network health."},
+                {"SECURITY_VERIFY_ERR":"Security check failed."},
+                {"REPORT_FINISH":"DP status reporting is completed."}
+            ]
+        },
+        {"name":"base_event", "offset":15,
+            "errcode":[
+                {"INVALID_EVENT_NAME":"Invalid event name."},
+                {"INVALID_EVENT_DESC":"Invalid event description."}
+            ]
+        },
+        {"name":"svc_timer_task", "offset":16,
+            "errcode":[
+                {"LOAD_INVALID_CJSON":"The JSON format of the data in the key-value storage is incorrect."},
+                {"LOAD_INVALID_DATA":"The cnt field is missing from the data in the key-value storage."},
+                {"UPDATE_LAST_FETCH_INVALID":"The lastFetchTime field is missing from the data returned from the cloud."},
+                {"UPDATE_TIMER_CNT_INVALID":"The count field is missing from the data returned from the cloud."},
+                {"UPDATE_TIMER_CNT_EXCEED":"The number of scheduled tasks returned from the cloud exceeds 30."}
+            ]
+        },
+        {"name":"svc_http", "offset":17,
+            "errcode":[
+                {"NOT_ENCRYPT_RET":"The result is not encrypted. Check the access permissions."},
+                {"FILL_URL_H_ERR":"Error in constructing the header."},
+                {"FILL_URL_FULL_ERR":"Error in constructing the URL."},
+                {"FILL_DATA_ERR":"Error in constructing the data."},
+                {"URL_CFG_AI_SPEAKER_ERR":"Failed to configure the speaker."},
+                {"URL_CFG_URL_ERR":"The httpUrl/mqttUrl field is missing."},
+                {"URL_CFG_URL2IP_ERR":"Error in parsing httpUrl/mqttUrl."},
+                {"URL_CFG_URL2IP_SELF_ERR":"Error in parsing httpsSelfUrl/mqttsSelfUrl."},
+                {"URL_CFG_URL2IP_VERIFY_ERR":"Error in parsing httpsVerifyUrl/mqttsVerifyUrl."},
+                {"URL_CFG_URL2IP_PSK_ERR":"Error in parsing httpsPSKUrl/mqttsPSKUrl."},
+                {"RECV_ERR":"Error in receiving data. Check the network health."},
+                {"RECV_DA_NOT_ENOUGH":"Data received is incomplete."},
+                {"API_VERIFY_FAILED":"Data verification failed."},
+                {"GW_NOT_EXIST":"Gateway information does not exist."},
+                {"API_TOKEN_EXPIRE":"Token expired."},
+                {"DEV_RESET_FACTORY":"Reset the device to factory defaults."},
+                {"DEV_NEED_REGISTER":"Device is not registered."},
+                {"ORDER_EXPIRE":"Order expired."},
+                {"NOT_EXISTS":"Not exist."},
+                {"SIGNATURE_ERROR":"Incorrect signature."},
+                {"API_VERSION_WRONG":"Incorrect API version."},
+                {"DEVICE_REMOVED":"Device has been removed."},
+                {"DEV_ALREADY_BIND":"Device has been bound."},
+                {"REMOTE_API_RUN_UNKNOW_FAILED":"Cannot identify the API."},
+                {"FORMAT_STRING_FAILED":"Failed to format the string."},
+                {"API_DECODE_FAILED":"Failed to decrypt data."},
+                {"SERV_VRFY_FAIL":"Server-side verification failed."},
+                {"DEVICE_IS_SUB_NODE_OR_IN_ELECTION":"Bluetooth mesh devices are electing a leader."},
+                {"EXT_MOD_NOT_SUPPORT_AUTO_ACT":"The extended module does not support automatic activation."}
+            ]
+        },
+        {"name":"svc_lan", "offset":21,
+            "errcode":[
+                {"SOCKET_FAULT":"Socket error. This might be because the mobile app proactively gets disconnected or a network error occurs."},
+                {"SEND_ERR":"Socket transmission error. Check the network health."},
+                {"NO_CLIENT_CONNECTED":"No device is connected over the LAN."}
+            ]
+        },
+        {"name":"svc_lan_linkage", "offset":22,
+            "errcode":[
+                {"SOCK_CREAT_ERR":"Failed to create a socket."},
+                {"SET_SOCK_ERR":"Failed to set the socket."},
+                {"SOCK_CONN_ERR":"Failed to connect to the socket. Check the network health."},
+                {"SEND_ERR":"Transmission failed. Check the network health."},
+                {"RECV_ERR":"Reception failed. Check the network health."}
+            ]
+        },
+        {"name":"svc_mqtt", "offset":23,
+            "errcode":[
+                {"CMD_NOT_EXEC":"The command is not executed."},
+                {"CMD_OUT_OF_TIME":"The command is not executed within the specified time."},
+                {"GW_MQ_OFFLILNE":"MQTT goes offline. Check the network health."}
+            ]
+        },
+        {"name":"svc_pegasus", "offset":24,
+            "errcode":[
+                {"DECODE_FAILED":"Decoding failed."},
+                {"DONOT_FOUND_MODULE":"Module is not found."}
+            ]
+        },
+        {"name":"svc_upgrade", "offset":25,
+            "errcode":[
+                {"APP_NOT_READY":"The application is not ready."},
+                {"NO_VALID_FIRMWARE":"Update verification failed."},
+                {"LAN_OTA_FINISH":"OTA update over LAN is completed."},
+                {"HMAC_NOT_MATCH":"HMAC does not match."}
+            ]
+        },
+        {"name":"svc_api_iot", "offset":26,
+            "errcode":[
+                {"DISCONNECTED_WITH_ROUTER":"Router is disconnected."},
+                {"DEV_NOT_BIND":"Device is not bound."}
+            ]
+        },
+        {"name":"svc_cellular", "offset":27,
+            "errcode":[
+                {"CALL_FAILED":"Failed to make calls."},
+                {"CALL_VOICE_START_ERR":"Failed to initiate voice calls."},
+                {"CALL_ANSWER_ERR":"Failed to answer calls."},
+                {"CALL_GET_INFO_ERR":"Failed to get the call information."},
+                {"CALL_HUNGUP_ERR":"Failed to hand up calls."},
+                {"SMS_SEND_ERR":"Failed to send the text message."},
+                {"SMS_SEND_TIMEOUT":"Text message sending timed out."},
+                {"SMS_ENCODE_ERR":"Text message code is incorrect."},
+                {"SMS_SIZE_ERR":"Text message exceeds the limit."}
+            ]
+        },
+        {"name":"svc_devos", "offset":28,
+            "errcode":[
+                {"NOT_EXISTS":"Not exist."},
+                {"SCMA_INVALID":"Invalid SCMA."},
+                {"DEV_DP_CNT_INVALID":"The number of DPs exceeds the limit of 255."},
+                {"NO_AUTHENTICATION":"Not authorized."},
+                {"ROUTER_NOT_FIND":"Router is not found."}
+            ]
+        },
+        {"name":"base_db", "offset":29,
+            "errcode":[
+                {"FLASH_NOT_ENOUGH_PAGE":"Flash pages are insufficient."}
+            ]
+        },
+        {"name":"link_core", "offset":30,
+            "errcode":[
+                {"NET_SOCKET_ERROR":"Failed to open a socket."},
+                {"NET_CONNECT_ERROR":"The connection to the given server/port failed."},
+                {"UNKNOWN_HOST_ERROR":"Failed to get an IP address for the given hostname."},
+                {"TLS_CONNECTION_ERROR":"TLS connection failed."},
+                {"DRBG_ENTROPY_ERROR":"Failed to generate a random seed for Mbed TLS."},
+                {"X509_ROOT_CRT_PARSE_ERROR":"Failed to parse X.509 root certificate."},
+                {"X509_DEVICE_CRT_PARSE_ERROR":"Failed to parse X.509 device certificate."},
+                {"PK_PRIVATE_KEY_PARSE_ERROR":"Failed to parse the key."},
+                {"HTTP_CLIENT_HEADER_ERROR":"Failed to initialize HTTP header."},
+                {"HTTP_CLIENT_SEND_ERROR":"Failed to send HTTP request."},
+                {"HTTP_RESPONSE_BUFFER_EMPTY":"HTTP buffer is empty."},
+                {"HTTP_GW_NOT_EXIST":"The gateway does not exist. It might have been deleted."}
+            ]
+        },
+        {"name":"svc_bt", "offset":31,
+            "errcode":[
+                {"API_TRSMITR_CONTINUE":"Transfer is in progress."},
+                {"API_TRSMITR_ERROR":"Transfer error."},
+                {"NETCFG_ERROR_ACK":"Bluetooth command error. An ACK packet is sent to the mobile app."}
+            ]
+        },
+        {"name":"svc_netmgr", "offset":32,
+            "errcode":[
+                {"NEED_FACTORY_RESET":"Failed to verify network initialization configuration. Factory reset is needed."}
+            ]
+        },
+        {"name":"GW_BT_DEV", "offset":49,
+            "errcode":[
+                {"BLE_CONNECT_SUCCESS":"Bluetooth Low Energy device is connected successfully."},
+                {"BLE_CONNECT_CNT_EXCEED":"The number of connected Bluetooth Low Energy devices exceeds the upper limit."},
+                {"BLE_CONNECT_HAL_FAILED":"Bluetooth Low Energy device fails to connect to the hardware abstraction layer (HAL)."},
+                {"BLE_CONNECT_HANDS_FAILED":"Bluetooth Low Energy connection handshake failed."},
+                {"BLE_CONNECT_HANDS_TIMEOUT":"Bluetooth Low Energy connection handshake timed out. Check the device's power state, distance, and Bluetooth connection to the mobile phone."},
+                {"BLE_CONNECT_GET_INFO_FAILED":"Failed to get the Bluetooth Low Energy device information."},
+                {"BLE_CONNECT_GET_LOGIN_KEY_FAILED":"Failed to get the Bluetooth Low Energy device login key."},
+                {"BLE_CONNECT_PAIR_DATA_LEN_ERR":"Failed to connect to the Bluetooth Low Energy device due to an error in the length of pairing data."},
+                {"BLE_CONNECT_SESSION_OPEN_TIMEOUT":"Failed to connect to the Bluetooth Low Energy device due to session timeout."},
+                {"BLE_CONNECT_SEND_FAILED":"During Bluetooth Low Energy connection, data transmission failed."},
+                {"BLE_LOCAL_RESET":"Bluetooth Low Energy device is reset locally. Check if this is a manual reset."},
+                {"BLE_SCAN_TIMEOUT":"Bluetooth Low Energy advertising packet scanning timed out. Check the device's power state, distance, and Bluetooth connection to the mobile phone."},
+                {"BLE_DISCONNECT_SUCCESS":"Bluetooth Low Energy device is disconnected successfully."},
+                {"BEACON_DEV_NOT_FOUND":"Device is not found."},
+                {"BEACON_DEV_KEY1_NOT_FOUND":"Device key1 is not found. The key for communication encryption."},
+                {"BEACON_DEV_NOT_BIND":"Device is not bound. Bind it again."},
+                {"BEACON_DECODE_PAIR_MSG_FAILED":"During device pairing, gateway's request for decrypting pairing information failed."},
+                {"BEACON_KEY_RESP_TIMEOUT":"During device pairing, the device's response to the beacon key timed out."},
+                {"BEACON_JOIN_NOTIFY_RESP_TIMEOUT":"During device pairing, the device's response to the network joining notification timed out."}
+            ]
+        },
+        {"name":"GW_ZG_DEV", "offset":50,
+            "errcode":[
+                {"ZB_HOST_TABLE_NULL":"The device does not have the host table, and it will be removed. The gateway has not stored the information about this device."},
+                {"ZB_SEQ_INVALID":"Invalid ZCL sequence. The sequence number of the current packet is smaller than that of the last packet."},
+                {"ZB_HOST_TO_GATEWAY_ERR":"The host failed to send data to the gateway, with an error in local UDP transmission. Try restarting the gateway."},
+                {"ZB_DATA_TOO_BIG":"Zigbee data exceeds the length limit. Check the data format."},
+                {"ZB_GW_TABLE_NULL":"The gateway's device list is not initialized. Try pairing again."},
+                {"ZB_GW_RELIABLE_ERR":"Reliable data reporting failed. Check the data format."},
+                {"ZB_GW_TRD_DEV_ERR":"Level-3 device fails to report data. Check the data format."},
+                {"ZB_GATEWAY_DEV_ID_ERR":"The device ID does not exist. Try pairing again."},
+                {"ZB_GATEWAY_UPDATE_SCE_LIST_ERR":"The scene list does not exist, which might be because the specified DP is not verified. Try creating the scene again."},
+                {"ZB_GATEWAY_MALLOC_ERR":"The gateway failed to request memory. The memory is insufficient. Try restarting the gateway."},
+                {"ZB_GATEWAY_DATA_TYPE_ERR":"The data type of the DP is incorrect. Check the data format."},
+                {"ZB_GATEWAY_TRD_DEV_DW_ERR":"Failed to send data to the level-3 device. Check the data format."},
+                {"ZB_GATEWAY_COM_DATALEN_ERR":"Data length error. Check the data format."},
+                {"ZB_GATEWAY_SEND_DATA_FAILED":"The gateway failed to send data to the host. Check the data format."},
+                {"ZB_GATEWAY_NCRYPT_DATA_FAILED":"Failed to encrypt data."},
+                {"ZB_GATWAY_STDRELIABLE_DW_FAILED":"Failed to send the standard pass-through command. Check the data format."},
+                {"ZB_GATWAY_CMD_TYPE_NOT_SUPPORT":"The type of the command is not supported. Check the data format."},
+                {"ZB_HOST_RCV_SLABSCMD_MSG_LEN_ERR":"Packet length error. Check the data format."},
+                {"ZB_HSOT_DEV_REJOIN":"The device is in the network rejoining process when the data is sent. Try again later."},
+                {"ZB_HOST_CMD_TYPE_NOT_SUPPORT":"The type of the host command is not supported. Check the data format."},
+                {"ZB_HOST_SEND_DATA_FAILED":"The host failed to send data. Try again."},
+                {"ZB_GATEWAY_DEV_BIND_ERR":"Binding error. Try pairing again."},
+                {"ZB_GATEWAY_SET_HB_STAT_FAILED":"The gateway failed to set the sub-device heartbeat, which might be because this sub-device is not adapted."},
+                {"ZB_GATEWAY_JOIN_STAT_FALSE":"The gateway is not in pairing mode. Be sure to put the gateway in pairing mode."},
+                {"ZB_GATEWAY_STAND_JOIN_ERR":"The sub-device failed to join the network, which might be because it is not adapted."},
+                {"ZB_GATEWAY_DEV_NOT_SUPPORT":"The sub-device is not supported, which might be because it is not adapted."},
+                {"ZB_HOST_RCV_JOIN_MSG_ERR":"Error in the length of the message received by the Zigbee host. Check the data format."},
+                {"ZB_GATEWAY_TRD_DEVID_ERR":"Error in the device ID of the level-3 device. Try pairing again."},
+                {"ZB_GATEWAY_THR_DEV_TPE_ERR":"Error in the device type of the level-3 device. Try pairing again."},
+                {"ZB_GATEWAY_RS_PROFILE_NOT_SUPPORT":"The Zigbee profile received is not supported, which might be because it is not adapted."},
+                {"ZB_SUBDEV_LEAVE_SELF":"The sub-device proactively leaves the network, which might be because it is reset."}
+            ]
+        },
+        {"name":"GW_BASE_LINKAGE", "offset":51,
+            "errcode":[
+                {"INIT_FAIL":"Failed to initialize the linkage module."},
+                {"COND_CHECK_FAIL":"The linkage condition is not met."},
+                {"RULE_ID_NOT_FIND":"The ID of the linkage rule does not exist. Check if the rule exists."},
+                {"RULE_ID_DISABLE":"The linkage rule is not enabled."},
+                {"RULE_IS_UPDATED":"The linkage rule is being updated. Try again later."},
+                {"FLOW_CNTL":"Flow control is triggered. This might be because the linkage is run too frequently or an infinite loop occurs."},
+                {"THREAD_CREATE_FAIL":"Failed to create the thread for linkage."},
+                {"COND_CHECK_NO_ID_MATCH":"The linkage condition is not met. The specified device ID is not found."},
+                {"COND_CHECK_NO_DP_MATCH":"The linkage condition is not met. The specified DP is not found."}
+            ]
+        },
+        {"name":"GW_ZG_SUB", "offset":52,
+            "errcode":[
+                {"ERR0":"Error 0"},
+                {"ERR1":"Error 1"},
+                {"ERR2":"Error 2: FIB restarts."},
+                {"ERR3":"Error 3: Restart after update."},
+                {"ERR4":"Error 4: External I/O restarts unexpectedly."},
+                {"ERR5":"Error 5: Restart due to low voltage, which might be caused by power-off or power supply issues."},
+                {"ERR6":"Error 6: Watchdog restarts."},
+                {"ERR7":"Error 7: Software proactively restarts."},
+                {"ERR8":"Error 8: Software restarts after a crash."},
+                {"ERR9":"Error 9: Flash memory restarts unexpectedly."},
+                {"ERR10":"Error 10: Unrecoverable hardware restart."},
+                {"ERR11":"Error 11: Internal CPU access error."},
+                {"ERR12":"Error 12: Restart due to power loss, which might be caused by power-off or power supply issues."},
+                {"ERR13":"Error 13"},
+                {"ERR14":"Error 14"},
+                {"ERR15":"Error 15"},
+                {"ERR16":"Error 16: Restart"},
+                {"ERR17":"Error 17: Disconnect"},
+                {"ERR18":"Error 18: Proactive network leaving. Check if the user manually removes the device."},
+                {"ERR19":"Error 19: Passive network leaving. Check if the user removes the device using the mobile app or the remote control."},
+                {"ERR20":"Error 20: I/O exception."},
+                {"ERR21":"Error 21: Memory leak."},
+                {"ERR22":"Error 22: Short URL is changed."},
+                {"ERR23":"Error 23: Factory reset is received."},
+                {"ERR24":"Error 24: F0 command is received."},
+                {"ERR25":"Error 25: Wake-up time is too long."},
+                {"ERR26":"Error 26: Unexpected factory reset is received."}
+            ]
+        },
+        {"name":"OS_ADAPTER_MUTEX", "offset":101,
+            "errcode":[
+                {"CREAT_FAILED":"Create failed."},
+                {"LOCK_FAILED":"Lock failed."},
+                {"UNLOCK_FAILED":"Unlock failed."},
+                {"RELEASE_FAILED":"Release failed."}
+            ]
+        },
+        {"name":"OS_ADAPTER_SEM", "offset":102,
+            "errcode":[
+                {"CREAT_FAILED":"Create failed."},
+                {"WAIT_FAILED":"Wait failed."},
+                {"POST_FAILED":"Post failed."},
+                {"RELEASE_FAILED":"Release failed."},
+                {"WAIT_TIMEOUT":"Wait timed out."}
+            ]
+        },
+        {"name":"OS_ADAPTER_QUEUE", "offset":103,
+            "errcode":[
+                {"CREAT_FAILED":"Create failed."},
+                {"SEND_FAIL":"Send failed."},
+                {"RECV_FAIL":"Receive failed."}
+            ]
+        },
+        {"name":"OS_ADAPTER_THRD", "offset":104,
+            "errcode":[
+                {"CREAT_FAILED":"Create failed."},
+                {"RELEASE_FAILED":"Release failed."},
+                {"JUDGE_SELF_FAILED":"Determine if this is the current thread."}
+            ]
+        },
+        {"name":"OS_ADAPTER", "offset":105,
+            "errcode":[
+                {"COM_ERROR":"Common exception."},
+                {"INVALID_PARM":"Invalid parameter"},
+                {"MALLOC_FAILED":"Failed to allocate memory."},
+                {"NOT_SUPPORTED":"Operation is not supported."},
+                {"NETWORK_ERROR":"Network error."},
+                {"AP_NOT_FOUND":"Access point (AP) is not found."},
+                {"AP_SCAN_FAILED":"Failed to scan for access point (AP)."},
+                {"AP_RELEASE_FAILED":"Failed to free the access point (AP)."},
+                {"CHAN_SET_FAILED":"Failed to set the channel."},
+                {"CHAN_GET_FAILED":"Failed to get the channel."},
+                {"IP_GET_FAILED":"Failed to get the IP address."},
+                {"MAC_SET_FAILED":"Failed to set the MAC address."},
+                {"MAC_GET_FAILED":"Failed to get the MAC address."},
+                {"WORKMODE_SET_FAILED":"Failed to set the working mode."},
+                {"WORKMODE_GET_FAILED":"Failed to get the working mode."},
+                {"SNIFFER_SET_FAILED":"Failed to set the sniffer."},
+                {"AP_START_FAILED":"Failed to start the access point (AP) mode."},
+                {"AP_STOP_FAILED":"Failed to stop the access point (AP) mode."},
+                {"APINFO_GET_FAILED":"Failed to get the access point (AP) information."},
+                {"FAST_CONN_FAILED":"Wi-Fi Easy Connect (EZ) failed."},
+                {"CONN_FAILED":"Connection failed."},
+                {"DISCONN_FAILED":"Disconnection failed."},
+                {"RSSI_GET_FAILED":"Failed to get the received signal strength indication (RSSI)."},
+                {"BSSID_GET_FAILED":"Failed to get the basic service set identifier (BSSID)."},
+                {"STAT_GET_FAILED":"Failed to get the status."},
+                {"CCODE_SET_FAILE":"Failed to set the CCODE."},
+                {"MGNT_SEND_FAILED":"Failed to send the management package."},
+                {"MGNT_REG_FAILED":"Failed to register the management package callback."},
+                {"WF_LPMODE_SET_FAILED":"Failed to set low-power Wi-Fi."},
+                {"CPU_LPMODE_SET_FAILED":"Failed to set the CPU low power mode."}
+            ]
+        },
+        {"name":"OS_ADAPTER_FLASH", "offset":106,
+            "errcode":[
+                {"READ_FAILED":"Failed to read the flash."},
+                {"WRITE_FAILED":"Failed to write the flash."},
+                {"ERASE_FAILED":"Failed to erase the flash."}
+            ]
+        },
+        {"name":"OS_ADAPTER_OTA", "offset":107,
+            "errcode":[
+                {"START_INFORM_FAILED":"Notification of OTA update request failed."},
+                {"PKT_SIZE_FAILED":"The size of the update is invalid."},
+                {"PROCESS_FAILED":"Failed to write the update."},
+                {"VERIFY_FAILED":"Failed to verify the update."},
+                {"END_INFORM_FAILED":"Notification of OTA update completion failed."}
+            ]
+        },
+        {"name":"OS_ADAPTER_WD", "offset":108,
+            "errcode":[
+                {"WD_INIT_FAILED":"Failed to initialize the watchdog."}
+            ]
+        },
+        {"name":"OS_ADAPTER_GPIO", "offset":109,
+            "errcode":[
+                {"INOUT_SET_FAILED":"Failed to set the GPIO in/out."},
+                {"MODE_SET_FAILED":"Failed to set the GPIO mode."},
+                {"WRITE_FAILED":"Failed to write the GPIO."},
+                {"IRQ_INIT_FAILED":"Failed to initialize the GPIO interrupt."}
+            ]
+        },
+        {"name":"OS_ADAPTER_UART", "offset":110,
+            "errcode":[
+                {"INIT_FAILED":"Failed to initialize the UART."},
+                {"DEINIT_FAILED":"Failed to free the UART."},
+                {"SEND_FAILED":"Failed to send UART data."},
+                {"READ_FAILED":"Failed to receive UART data."}
+            ]
+        },
+        {"name":"OS_ADAPTER_I2C", "offset":111,
+            "errcode":[
+                {"OPEN_FAILED":"Failed to enable I2C."},
+                {"CLOSE_FAILED":"Failed to disable I2C."},
+                {"READ_FAILED":"Failed to read I2C."},
+                {"WRITE_FAILED":"Failed to write I2C."},
+                {"INVALID_PARM":"Invalid parameter."},
+                {"INIT_FAILED":"Initialization failed."},
+                {"DEINIT_FAILED":"Release failed."},
+                {"MODE_ERR":"Mode error."},
+                {"BUSY":"Busy"},
+                {"TIMEOUT":"Timeout"},
+                {"MASTER_LOST_ARB":"Host tiebreaker failed."},
+                {"BUS_ERR":"Bus error."},
+                {"TRANS_ERR":"Transfer error."},
+                {"ADDR_NO_ACK ":"No ACK packet is returned."},
+                {"IRQ_INIT_FAILED ":"Interrupt initialization failed."},
+                {"RESERVE1_ERR":"Reserved error code 1"},
+                {"RESERVE2_ERR":"Reserved error code 2"},
+                {"RESERVE3_ERR":"Reserved error code 3"}
+            ]
+        },
+        {"name":"OS_ADAPTER_BLE", "offset":112,
+            "errcode":[
+                {"HANDLE_ERROR":"Bluetooth Low Energy handle error."},
+                {"BUSY":"Bluetooth Low Energy busy."},
+                {"TIMEOUT":"Bluetooth Low Energy timeout."},
+                {"RESERVED1":"Bluetooth Low Energy reserved error code 1"},
+                {"RESERVED2":"Bluetooth Low Energy reserved error code 2"},
+                {"RESERVED3":"Bluetooth Low Energy reserved error code 3"},
+                {"INIT_FAILED":"Failed to initialize Bluetooth Low Energy."},
+                {"DEINIT_FAILED":"Failed to free Bluetooth Low Energy."},
+                {"GATT_CONN_FAILED":"Failed to connect to Bluetooth Low Energy GATT."},
+                {"GATT_DISCONN_FAILED":"Failed to disconnect from Bluetooth Low Energy GATT."},
+                {"ADV_START_FAILED":"Failed to start Bluetooth Low Energy advertising."},
+                {"ADV_STOP_FAILED":"Failed to stop Bluetooth Low Energy advertising."},
+                {"SCAN_START_FAILED":"Failed to start Bluetooth Low Energy scanning."},
+                {"SCAN_STAOP_FAILED":"Failed to stop Bluetooth Low Energy scanning."},
+                {"SVC_DISC_FAILED":"Failed to discover Bluetooth Low Energy service."},
+                {"CHAR_DISC_FAILED":"Failed to discover Bluetooth Low Energy characteristic values."},
+                {"DESC_DISC_FAILED":"Failed to discover Bluetooth Low Energy characteristic descriptor."},
+                {"NOTIFY_FAILED":"Bluetooth Low Energy peripheral failed to send a Notification."},
+                {"INDICATE_FAILED":"Bluetooth Low Energy peripheral failed to send an Indication."},
+                {"WRITE_FAILED":"Bluetooth Low Energy central failed to write data."},
+                {"READ_FAILED":"Bluetooth Low Energy central failed to read data."},
+                {"MTU_REQ_FAILED":"Bluetooth Low Energy central failed to make an MTU request."},
+                {"MTU_REPLY_FAILED":"Bluetooth Low Energy peripheral failed to send an MTU response."},
+                {"CONN_PARAM_UPDATE_FAILED":"Failed to update Bluetooth Low Energy connection parameters."},
+                {"CONN_RSSI_GET_FAILED":"Failed to get the Bluetooth Low Energy signal strength."},
+                {"MESH_INVALID_OPCODE":"Invalid Bluetooth Low Energy mesh opcode."},
+                {"MESH_INVALID_ELEMENT":"Invalid Bluetooth Low Energy mesh element."},
+                {"MESH_INVALID_MODEL":"Invalid Bluetooth Low Energy mesh model."},
+                {"MESH_INVALID_ADDR":"Invalid Bluetooth Low Energy mesh source, virtual, or destination address."},
+                {"MESH_INVALID_INDEX":"Invalid Bluetooth Low Energy mesh indexes, such as appkey index and netkey index."},
+                {"MESH_NO_MEMORY":"Bluetooth Low Energy mesh memory is full, which might be caused by rapid packet transmission."},
+                {"MESH_APPKEY_NOT_BOUND_MODEL":"Bluetooth Low Energy mesh appkey binding error."},
+                {"MESH_RESERVED1":"Bluetooth Low Energy mesh reserved error code 1"},
+                {"MESH_RESERVED2":"Bluetooth Low Energy mesh reserved error code 2"},
+                {"MESH_RESERVED3":"Bluetooth Low Energy mesh reserved error code 3"},
+                {"MESH_RESERVED4":"Bluetooth Low Energy mesh reserved error code 4"},
+                {"MESH_RESERVED5":"Bluetooth Low Energy mesh reserved error code 5"},
+                {"MESH_PROVISION_FAIL":"Failed to pair the Bluetooth Low Energy mesh device."},
+                {"MESH_COMPO_GET_FAIL":"Failed to get the Bluetooth Low Energy mesh Composition Data."},
+                {"MESH_MODEL_BIND_FAIL":"Failed to bind with the Bluetooth Low Energy mesh model."},
+                {"MESH_APPKEY_ADD_FAIL":"Failed to add the Bluetooth Low Energy mesh appkey."},
+                {"MESH_NETKEY_ADD_FAIL":"Failed to add the Bluetooth Low Energy mesh netkey."},
+                {"MESH_APPKEY_BIND_FAIL":"Failed to bind with the Bluetooth Low Energy mesh appkey."}
+            ]
+        },
+		{"name":"MID_TRANSPORT", "offset":113,
+            "errcode":[
+                {"INVALID_PARM":"Invalid parameter."},
+                {"MALLOC_FAILED":"Failed to request memory."},
+                {"DNS_PARSED_FAILED":"Failed to parse DNS. Check the network health."},
+                {"SOCK_CREAT_FAILED":"Failed to create the socket. Check the limits on the number of sockets."},
+				{"SOCK_SET_REUSE_FAILED":"Failed to reuse the socket."},
+                {"SOCK_SET_DISABLE_NAGLE_FAILED":"Failed to disable Nagle algorithm on the socket."},
+                {"SOCK_SET_KEEP_ALIVE_FAILED":"Failed to set the keepalive on the socket."},
+                {"SOCK_SET_BLOCK_FAILED":"Failed to set the blocking on the socket."},
+				{"SOCK_NET_BIND_FAILED":"Failed to bind the network on the socket."},
+                {"SOCK_SET_TIMEOUT_FAILED":"Failed to set the timeout on the socket."},
+                {"TCP_CONNECD_FAILED":"TCP connection failed. Check the network health."},
+                {"TCP_TLS_CONNECD_FAILED":"TCP connection with TLS failed. Check the network health."},
+				{"PACK_SEND_FAILED":"Packet transmission failed. Check the network health."}
+            ]
+        },
+        {"name":"OS_ADAPTER_SPI", "offset":114,
+            "errcode":[
+                {"INVALID_PARM":"Invalid parameter."},
+                {"INIT_FAILED":"Initialization failed."},
+                {"DEINIT_FAILED":"Release failed."},
+                {"MODE_ERR":"Mode error."},
+                {"BUSY":"Busy"},
+                {"DATA_LOST":"Data loss."},
+                {"TIMEOUT":"Timeout"},
+                {"BUS_ERR":"Bus error."},
+                {"TRANS_ERR":"Transfer error."},
+                {"IRQ_ERR ":"Interrupt exception."},
+                {"RESERVE1_ERR":"Reserved error code 1"},
+                {"RESERVE2_ERR":"Reserved error code 2"},
+                {"RESERVE3_ERR":"Reserved error code 3"}
+            ]
+        },
+        {"name":"OS_ADAPTER_PWM", "offset":115,
+            "errcode":[
+                {"INVALID_PARM":"Invalid parameter."},
+                {"INIT_FAILED":"Initialization failed."},
+                {"DEINIT_FAILED":"Release failed."},
+                {"MODE_ERR":"Mode error."},
+                {"BUSY":"Busy"},
+                {"IRQ_INIT_FAILED ":"Interrupt initialization failed."},
+                {"RESERVE1_ERR":"Reserved error code 1"},
+                {"RESERVE2_ERR":"Reserved error code 2"},
+                {"RESERVE3_ERR":"Reserved error code 3"}
+            ]
+        },
+        {"name":"OS_ADAPTER_ADC", "offset":116,
+            "errcode":[
+                {"INVALID_PARM":"Invalid parameter."},
+                {"INIT_FAILED":"Initialization failed."},
+                {"DEINIT_FAILED":"Release failed."},
+                {"READ_FAILED":"Failed to read ADC."},
+                {"MODE_ERR":"Mode error."},
+                {"BUSY":"Busy"},
+                {"TIMEOUT":"Timeout"},
+                {"IRQ_INIT_FAILED ":"Interrupt initialization failed."},
+                {"RESERVE1_ERR":"Reserved error code 1"},
+                {"RESERVE2_ERR":"Reserved error code 2"},
+                {"RESERVE3_ERR":"Reserved error code 3"}
+            ]
+        },
+        {"name":"OS_ADAPTER_DAC", "offset":117,
+            "errcode":[
+                {"INVALID_PARM":"Invalid parameter."},
+                {"INIT_FAILED":"Initialization failed."},
+                {"DEINIT_FAILED":"Release failed."},
+                {"WRITE_FAILED":"Failed to write DAC."},
+                {"MODE_ERR":"Mode error."},
+                {"BUSY":"Busy"},
+                {"TIMEOUT":"Timeout"},
+                {"IRQ_INIT_FAILED ":"Interrupt initialization failed."},
+                {"RESERVE1_ERR":"Reserved error code 1"},
+                {"RESERVE2_ERR":"Reserved error code 2"},
+                {"RESERVE3_ERR":"Reserved error code 3"}
+            ]
+        },
+        {"name":"OS_ADAPTER_I2S", "offset":118,
+            "errcode":[
+                {"INVALID_PARM":"Invalid parameter."},
+                {"INIT_FAILED":"Initialization failed."},
+                {"DEINIT_FAILED":"Release failed."},
+                {"WRITE_FAILED":"Failed to write I2S."},
+                {"READ_FAILED":"Failed to read I2S."},
+                {"MODE_ERR":"Mode error."},
+                {"BUSY":"Busy"},
+                {"TIMEOUT":"Timeout"},
+                {"DATA_LOST":"Data loss."},
+                {"TRANS_ERR":"Transfer error."},
+                {"IRQ_INIT_FAILED ":"Interrupt initialization failed."},
+                {"RESERVE1_ERR":"Reserved error code 1"},
+                {"RESERVE2_ERR":"Reserved error code 2"},
+                {"RESERVE3_ERR":"Reserved error code 3"}
+            ]
+        },
+        {"name":"GW_SUB_MGR", "offset":119,
+            "errcode":[
+                {"INIT_FAIL":"Failed to initialize the sub-device management module."},
+                {"BIND_THREAD_CREATE_FAIL":"Failed to create the thread for device binding."},
+                {"EXCEED_MAX_CNT":"The maximum number of allowed sub-devices is exceeded."},
+                {"NODE_CREATE_FAIL":"Failed to create the sub-device node."},
+                {"CLOUD_HTTP_BIND_FAIL":"Failed to interact with HTTP."}
+            ]
+        },
+        {"name":"APP_TMP", "offset":120,
+            "errcode":[
+                {"xxx":"XXX"}
+            ]
+        },
+        {"name":"IMM_COM", "offset":121,
+            "errcode":[
+                {"MEM_PARTITION_FULL":"The storage buffer is full."}
+            ]
+        },
+        {"name":"IMM_CLOUD_STORAGE", "offset":122,
+            "errcode":[
+                {"ENCRYPT_KEY_UPDATED":"The storage buffer is full."},
+                {"STATUS_OFF":"Cloud storage is stopped."},
+                {"UPLOAD_INTERRUPT_ERROR":"An interrupt caused by data reporting."},
+                {"EVENT_STATUS_INVALID":"Event status error."}
+            ]
+        }
+    ]
+}

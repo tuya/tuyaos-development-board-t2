@@ -1,0 +1,71 @@
+/**
+ * @file tdd_dimmer_common.h
+ * @author www.tuya.com
+ * @version 0.1
+ * @date 2023-03-06
+ *
+ * @copyright Copyright (c) tuya.inc 2023
+ *
+ */
+
+#ifndef __TDD_DIMMER_COMMON_H__
+#define __TDD_DIMMER_COMMON_H__
+
+#include "tdd_sw_i2c.h"
+#include "tdd_dimmer_types.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+/***********************************************************
+*********************** macro define ***********************
+***********************************************************/
+
+
+/***********************************************************
+********************** typedef define **********************
+***********************************************************/
+
+
+/***********************************************************
+******************* function declaration *******************
+***********************************************************/
+/**
+ * @brief       检查颜色通道配置参数合法性
+ *
+ * @param[in] : p_ch_cfg: color channel config
+ *
+ * @return TRUE: 合法  FALSE: 非法
+ */
+BOOL_T tdd_check_channel_cfg_param(DIMMER_CH_CFG_U *p_ch_cfg);
+
+/**
+ * @brief       send data
+ *
+ * @param[in] i2c_pin: the information of iic pin number
+ * @param[in] data: data buffer
+ * @param[in] len: data length
+ *
+ * @return OPRT_OK on success. Others on error, please refer to "tuya_error_code.h"
+ */
+OPERATE_RET tdd_dimmer_i2c_send_data(TDD_I2C_PIN_T i2c_pin, IN UCHAR_T *data, IN UCHAR_T len);
+
+/**
+ * @brief       send data (flags)
+ *
+ * @param[in] i2c_pin: the information of iic pin number
+ * @param[in] flags: iic protocol flags
+ * @param[in] data: data buffer
+ * @param[in] len: data length
+ *
+ * @return OPRT_OK on success. Others on error, please refer to "tuya_error_code.h"
+ */
+OPERATE_RET tdd_dimmer_i2c_flag_send_data(TDD_I2C_PIN_T i2c_pin, INT_T flags, IN UCHAR_T *data, IN UCHAR_T len);
+
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif /* __TDD_DIMMER_COMMON_H__ */

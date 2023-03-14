@@ -48,6 +48,7 @@ CFLAGS += $(TUYA_SDK_CFLAGS)
 -include $(_XMAKE_DIR)/none_permissions.mk
 -include $(_XMAKE_DIR)/doc.mk
 -include $(_XMAKE_DIR)/ut.mk
+-include $(_XMAKE_DIR)/project_self.mk
 
 -include $(_XMAKE_DIR)/help.mk
 

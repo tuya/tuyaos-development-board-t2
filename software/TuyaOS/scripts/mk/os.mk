@@ -88,10 +88,12 @@ os_files:
 	@mkdir -p $(OS_FILES_DIR)/build
 	@mkdir -p $(OS_FILES_DIR)/libs
 	@cp -fr ./build/tuya_iot.config $(OS_FILES_DIR)/build
+	@if [ -f $(ABLITY_JSON_PATH) ]; then cp $(ABLITY_JSON_PATH) $(OS_FILES_DIR)/build; fi
 	@cp -fr ./build/build_param.template $(OS_FILES_DIR)/build
 	@rm -fr ./include/vendor/ -rf
 	@cp -fr ./include $(OS_FILES_DIR)/
 	@cp -fr ./libs/libtuyaos.*	$(OS_FILES_DIR)/libs/
+	@if [ -f ./libs/libCHIP.a ]; then cp -fr ./libs/libCHIP.a $(OS_FILES_DIR)/libs/; fi
 	@cp -fr ./scripts $(OS_FILES_DIR)
 
 	# copy分包编译产物

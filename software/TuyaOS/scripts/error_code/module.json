@@ -252,7 +252,8 @@
             "errcode":[
                 {"APP_NOT_READY":"应用尚未就绪"},
                 {"NO_VALID_FIRMWARE":"升级信息字段校验失败"},
-                {"LAN_OTA_FINISH":"局域网ota完成"}
+                {"LAN_OTA_FINISH":"局域网ota完成"},
+                {"HMAC_NOT_MATCH":"HMAC不匹配"}
             ]
         },
         {"name":"svc_api_iot", "offset":26,
@@ -300,7 +301,7 @@
                 {"PK_PRIVATE_KEY_PARSE_ERROR":"秘钥解析失败"},
                 {"HTTP_CLIENT_HEADER_ERROR":"HTTP头初始化失败"},
                 {"HTTP_CLIENT_SEND_ERROR":"HTTP请求发送失败"},
-                {"HTTP_RESPONSE_BUFFER_EMPTY":"HTTPb buffer为空"},
+                {"HTTP_RESPONSE_BUFFER_EMPTY":"HTTP buffer为空"},
                 {"HTTP_GW_NOT_EXIST":"网关不存在，可能设备已被删除"}
             ]
         },
@@ -380,7 +381,7 @@
                 {"COND_CHECK_FAIL":"联动条件不满足"},
                 {"RULE_ID_NOT_FIND":"联动规则ID不存在,请检查规则是否存在"},
                 {"RULE_ID_DISABLE":"联动规则未启用,请检查规则是否启用"},
-                {"RULE_IS_UPDATED":"联动规在更新中,请稍后重试"},
+                {"RULE_IS_UPDATED":"联动规则在更新中,请稍后重试"},
                 {"FLOW_CNTL":"联动流控,可能触发过于频繁,请稍后再重试,也可能存在死循环,请检查联动是否死循环"},
                 {"THREAD_CREATE_FAIL":"联动线程创建失败"},
                 {"COND_CHECK_NO_ID_MATCH":"联动条件不满足(设备ID无匹配项)"},
@@ -479,7 +480,7 @@
                 {"CCODE_SET_FAILE":"CCODE设置失败"},
                 {"MGNT_SEND_FAILED":"管理包发送失败"},
                 {"MGNT_REG_FAILED":"管理包回调注册失败"},
-                {"WF_LPMODE_SET_FAILED":"Fi低功耗设置失败"},
+                {"WF_LPMODE_SET_FAILED":"Wi-Fi低功耗设置失败"},
                 {"CPU_LPMODE_SET_FAILED":"CPU低功耗模式设置失败"}
             ]
         },

@@ -1,10 +1,8 @@
 ############################################################
 # 全局环境变量配置
 ############################################################
--include ../../build/tuya_iot.config
-
-
-TOPDIR := $(abspath $(dir $(lastword $(MAKEFILE_LIST)))/../)
+TOPDIR := $(abspath $(dir $(lastword $(MAKEFILE_LIST)))/../../)
+-include $(TOPDIR)/build/tuya_iot.config
 OUTPUT_DIR ?= $(TOPDIR)/output/ut
 
 CFLAGS   := -g -Werror-implicit-function-declaration
@@ -44,9 +42,13 @@ CXXFLAGS += -DTUYA_UT=$(TUYA_UT)
 # 包含所有SDK组件的local.mk 并 配置头文件路径
 ############################################################
 TUYA_SDK_INC :=				 # 加载至CFLAGS中提供给其他组件使用；打包进SDK产物中；
--include $(shell find $(TOPDIR)/components -name local.mk)
-CFLAGS += $(addprefix -I,$(PRJ_INC))
-CXXFLAGS += $(addprefix -I,$(PRJ_INC))
+TUYA_SDK_CFLAGS :=			 # 模块对外CFLAGS：其他组件编译时可感知到
+-include $(shell find $(TOPDIR)/adapter $(TOPDIR)/components -name local.mk 2>/dev/null)
+TUYA_SDK_INC_ALL_SUBDIRS := $(foreach dir,$(TUYA_SDK_INC),$(shell find $(dir) -type d))
+TUYA_SDK_INC_ALL_SUBDIRS += $(TOPDIR)/include/base/include
+CFLAGS += $(addprefix -I,$(TUYA_SDK_INC_ALL_SUBDIRS))
+CFLAGS += $(TUYA_SDK_CFLAGS)
+CXXFLAGS += $(addprefix -I,$(TUYA_SDK_INC_ALL_SUBDIRS))
 
 
 ############################################################

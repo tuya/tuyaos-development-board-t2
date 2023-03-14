@@ -200,11 +200,11 @@ app_by_name:
 		cd ./apps/$${_demos}/; \
 		if [ -f build.sh ]; then	\
 			sh ./build.sh $${_demos} $(USER_SW_VER) $(TARGET_PLATFORM) $${_app_path} $(USER_CMD);	\
+		elif [ -f Makefile -o -f makefile ]; then	\
+			make APP_BIN_NAME=$${_demos} USER_SW_VER=$(USER_SW_VER) APP_PATH=$${_app_path} USER_CMD=$(USER_CMD);	\
 		elif [ -f ${TUYAOS_BUILD_PATH}/$${TUYA_APPS_BUILD_PATH}/$${TUYA_APPS_BUILD_CMD} ]; then	\
 		    cd ${TUYAOS_BUILD_PATH}/$${TUYA_APPS_BUILD_PATH};	\
 		    sh $${TUYA_APPS_BUILD_CMD} $${_demos} $(USER_SW_VER) $(TARGET_PLATFORM) $${_app_path} $(USER_CMD);	\
-		elif [ -f Makefile -o -f makefile ]; then	\
-			make APP_BIN_NAME=$${_demos} USER_SW_VER=$(USER_SW_VER) APP_PATH=$${_app_path} USER_CMD=$(USER_CMD);	\
 		else	\
 		    echo "No Build Command!";\
 		fi
@@ -228,11 +228,11 @@ app_clean_by_name:
 		cd ./apps/$${_demos}/; \
 		if [ -f build.sh ]; then	\
 			sh ./build.sh $${_demos} $(USER_SW_VER) $(TARGET_PLATFORM) $${_app_path} $(USER_CMD);	\
+		elif [ -f Makefile -o -f makefile ]; then	\
+			make APP_BIN_NAME=$${_demos} USER_SW_VER=$(USER_SW_VER) APP_PATH=$${_app_path} USER_CMD=$(USER_CMD);	\
 		elif [ -f ${TUYAOS_BUILD_PATH}/$${TUYA_APPS_BUILD_PATH}/$${TUYA_APPS_BUILD_CMD} ]; then	\
 		    cd ${TUYAOS_BUILD_PATH}/$${TUYA_APPS_BUILD_PATH};	\
 		    sh $${TUYA_APPS_BUILD_CMD} $${_demos} $(USER_SW_VER) $(TARGET_PLATFORM) $${_app_path} $(USER_CMD);	\
-		elif [ -f Makefile -o -f makefile ]; then	\
-			make APP_BIN_NAME=$${_demos} USER_SW_VER=$(USER_SW_VER) APP_PATH=$${_app_path} USER_CMD=$(USER_CMD);	\
 		else	\
 		    echo "No Clean Command!";\
 		fi

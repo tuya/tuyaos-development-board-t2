@@ -222,6 +222,9 @@ $(_XMAKE_OBJS_DIR)/static/%.c.o: $(_XMAKE_TOPDIR)/%.c
 $(_XMAKE_OBJS_DIR)/static/%.cpp.o: $(_XMAKE_TOPDIR)/%.cpp
 	@$(call build-cxx-object,$@,$<,$(XMAKE_STATIC_CFLAGS) $(PRIVATE_CFLAGS))
 
+$(_XMAKE_OBJS_DIR)/static/%.cc.o: $(_XMAKE_TOPDIR)/%.cc
+	@$(call build-cxx-object,$@,$<,$(XMAKE_STATIC_CFLAGS) $(PRIVATE_CFLAGS))
+
 $(_XMAKE_OBJS_DIR)/static/%.s.o: $(_XMAKE_TOPDIR)/%.s
 	@$(call build-object,$@,$<,$(XMAKE_STATIC_CFLAGS) $(PRIVATE_CFLAGS))
 
@@ -235,6 +238,9 @@ $(_XMAKE_OBJS_DIR)/shared/%.c.o: $(_XMAKE_TOPDIR)/%.c
 $(_XMAKE_OBJS_DIR)/shared/%.cpp.o: $(_XMAKE_TOPDIR)/%.cpp
 	@$(call build-cxx-object,$@,$<,$(XMAKE_SHARED_CFLAGS) $(PRIVATE_CFLAGS))
 
+$(_XMAKE_OBJS_DIR)/shared/%.cc.o: $(_XMAKE_TOPDIR)/%.cc
+	@$(call build-cxx-object,$@,$<,$(XMAKE_SHARED_CFLAGS) $(PRIVATE_CFLAGS))
+
 $(_XMAKE_OBJS_DIR)/shared/%.s.o: $(_XMAKE_TOPDIR)/%.s
 	@$(call build-object,$@,$<,$(XMAKE_SHARED_CFLAGS) $(PRIVATE_CFLAGS))
 
@@ -246,6 +252,9 @@ $(_XMAKE_OBJS_DIR)/exe/%.c.o: $(_XMAKE_TOPDIR)/%.c
 	@$(call build-object,$@,$<,$(XMAKE_EXECUTABLE_CFLAGS) $(PRIVATE_CFLAGS))
 
 $(_XMAKE_OBJS_DIR)/exe/%.cpp.o: $(_XMAKE_TOPDIR)/%.cpp
+	@$(call build-cxx-object,$@,$<,$(XMAKE_EXECUTABLE_CFLAGS) $(PRIVATE_CFLAGS))
+
+$(_XMAKE_OBJS_DIR)/exe/%.cc.o: $(_XMAKE_TOPDIR)/%.cc
 	@$(call build-cxx-object,$@,$<,$(XMAKE_EXECUTABLE_CFLAGS) $(PRIVATE_CFLAGS))
 
 $(_XMAKE_OBJS_DIR)/exe/%.s.o: $(_XMAKE_TOPDIR)/%.s

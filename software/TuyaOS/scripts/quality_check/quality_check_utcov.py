@@ -48,9 +48,9 @@ def quality_check_utcov(lcov, o_json):
         if not coverFile:  # 过滤表头
             continue
         file_path = coverFile[0].get_text()
-        if "/components/" not in file_path:
+        if "components/" not in file_path:
             continue
-        component, item = file_path.split("/components/", maxsplit=1)[1].split('/', maxsplit=1)
+        component, item = file_path.split("components/", maxsplit=1)[1].split('/', maxsplit=1)
         if not component:  # 非严格模式
             continue
         td_list = tr.select('td')

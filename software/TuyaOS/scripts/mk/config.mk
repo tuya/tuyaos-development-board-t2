@@ -10,6 +10,7 @@ menuconfig:
 ifeq ($(IOT_CONFIG_PATH),)
 IOT_CONFIG_PATH:=./tmp
 endif
+ABLITY_JSON_PATH:=./build/tuya_iot_ablity.json
 
 pre_config_choice:
 	@if [ "$(HAS_PYTHON3)" = "" ]; then echo has no python3; exit 1; fi
@@ -46,6 +47,8 @@ pre_config:
 	@mkdir -p ./include/base/include
 	@mv $(IOT_CONFIG_PATH)/tuya_iot_config.h ./include/base/include -f
 	@echo "config.h is generated !!"
+	@python3 ./scripts/h2ablity.py ./include/base/include/tuya_iot_config.h $(ABLITY_JSON_PATH)
+	@echo "$(ABLITY_JSON_PATH) is generated !!"
 
 ERROR_CODE_PATH:=./include/base/include/tuya_error_code.h
 error_code_config:
@@ -59,7 +62,7 @@ error_code_config:
 ############################################################
 # APP config
 ############################################################
-APP_NAME ?= $(shell cat ./tmp/app_name.log)
+APP_NAME ?= $(shell cat ./tmp/app_name.log 2>&1)
 APP_CONFIG_PATH = ./apps/$(APP_NAME)/build/tuya_app.config
 app_menuconfig:
 	@if [ "$(HAS_PYTHON3)" = "" ]; then echo has no python3; exit 1; fi
