@@ -1,0 +1,3 @@
+# tuyaos_ir_driver_demo_quickstart
+
+红外驱动组件示例代码
